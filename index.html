@@ -27,6 +27,7 @@
                       ![cat](images/substack-cats.png)
                       ## An introduction for new programmers
                       ### *So easy your human owner could do it too!*
+                      <div class="loadingMessage">If this message never goes away then your browser is having some problems. <a href="javascript-for-cats-3b2b3be168de2588137ae09e3454061f99f5b3cc">Here is a PDF version</a> you can read instead! You could also try coming back in the Google Chrome browser.</div>
                       
                       People will tell you JavaScript is complicated, ugly, a toy language, only used by hipsters and many other things. Let's ignore all that stuff forever and instead learn some JavaScript basics so that you can get up and running in no time*!
                       
@@ -184,6 +185,8 @@
       
       var trimmed = lines.join('\n')
       content.innerHTML = marked(trimmed)
+      
+      content.removeChild(document.querySelector('.loadingMessage'))
     </script>
     
     <script src="javascripts/rainbow.js"></script>
