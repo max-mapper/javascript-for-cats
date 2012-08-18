@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>JavaScript for Cats</title>
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/rainbow.github.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="container">
+      <div id="main">
+        <div id="post" class="sticky-menu">
+          <div class="inner clearfix">
+            <div class="document prose">
+              <div class="surface preview">
+                <div class="content-preview-wrapper">
+                  <div class="content-preview">
+                    <div class="post-content">
+                      # JavaScript For Cats
+                      ## An introduction for new programmers
+                      ### *So easy your human owner could do it too!*
+                      
+                      People will tell you JavaScript is complicated, ugly, a toy language, only used by hipsters and many other things. Let's ignore all that stuff forever and instead learn some JavaScript basics so that you can get up and running in no time*!
+                      
+                      \* *actual time: more than none. probably between 1 and 2 days. Also since you are a cat you are less likely to run and more likely to lay around in the sun*
+                      
+                      ## The absolute basics
+                      
+                      Here's an acronym you should know about: **[REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)**. REPLs are otherwise known as "command lines", "consoles", or "terminals". Basically its a way to type one thing at a time into a computer and immediately get the computers answer back. They are super useful as a learning tool (I still use a REPL nearly every day I'm coding).
+                      
+                      There is JavaScript running on this page right now! And there's also a REPL! Let's play around with it a little. For the sake of simplicity I'll assume you are using Google Chrome to read this page (if you aren't its probably easier on both of us if you follow along with Chrome).
+                      
+                      First, right click anywhere on the screen and hit **Inspect Element**, then click on the **Console** tab. You should see a thingy that looks like this:
+                      
+                      ![console](images/console.png)
+                      
+                      The console does some pretty cool stuff. Here I have started to type something and the console is helping me out by giving me a list of all the possible things I could continue to type! Another thing you could do is type `1 + 1` into the repl and then hit the `Enter` key and watch what happens.
+                      
+                      Using the console (aka REPL) is a very important part of learning JavaScript. If you don't know if something works or what the command is for something, go to the REPL and figure it out! Here's an example:
+                      
+                      Since I am a cat I want to replace every instance of the word `dog` on the internet with `those blasted dogs`. First go into your REPL and type in a few sentences that contain the word `dog` at least once. In JavaScript a bunch of letters, numbers, words or anything else is known as a **String** (as in a *string* of characters). Strings have to begin AND and with a quotation mark. Single `'` or double `"` is fine, just make sure you use the same at the beginning as you do at the end.
+                      
+                      ![console](images/console-strings.png)
+                      
+                      See the nasty error message? Don't worry - you didn't break any laws. SyntaxError ILLEGAL is just the way it sounds when robots tell you that your program has a problem. The first two sentences had matching quotation marks at the beginning and end, but when I mixed single and double quotation marks it freaked out on me.
+                      
+                      Ok, to fix up one of these sentences (by replacing `dog` with our enhanced version) we have to first save the original sentence so that we can call it up later when we do our replacing magic. Notice how the string gets repeated in red when we type it into the console? This is because we haven't told it to save the sentence anywhere so it just gives it right back (or it gives us an Error back if we messed something up).
+                      
+                      To store things we use things called **variables**. The word 'variable' means 'many' and is used because variables can store many different types of things. They are pretty much like mailboxes. We put something in a variable, like our sentence, and then give the variable an address that we can use to look up the sentence later. In real life mailboxes have to have PO Box numbers but in JavaScript you usually just use lowercase letters or numbers without any spaces.
+                      
+                      ![console](images/console-variables.png)
+                      
+                      `var` is shorthand for variable and the `=` means *store the thing on the right hand side in the thing on the left hand side*. Also as you can see, now that we are storing our sentence in a variable the console doesn't just return our sentence right away, but instead gives us `undefined` which means *there was nothing to return*.
+                      
+                      If you simply type variable names into the console it will return the value stored in those variables. A note about variables is that by default they go away when you switch to a different page. If I were to hit the Refresh button in Chrome, for example, my `dogSentence` variable would get wiped and it would be like it never existed. But don't worry about this too much for now -- you can just hit the up or down arrows on your keyboard while in the console to go through everything you've entered in recently.
+                      
+                      Now that we have our sentence stored in a variable lets give that variable to something that will replace words! We call things that perform actions like this **functions** because they... serve a function (or purpose) for us. Calling them "purposes" sounded weird I guess so they went with the word "function" instead.
+                      
+                      JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of variables (zero, one or many) and return either nothing (`undefined`) or exactly one variable (functions cant return two or more variables at a time). The `replace` function is available to use on any strings and takes in two variables: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
+                      
+                      ![console](images/console-variables.png)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="javascripts/marked.js"></script>
+    <script type="text/javascript">
+      
+      var content = document.querySelector('.post-content')
+      content.setAttribute('style', "white-space: normal;")
+      
+      // kinda hacky but whatever
+      var lines = content.innerHTML.split('\n')
+      var baseIndent = lines[1].split('#')[0]
+      
+      lines = lines.map(function iterator(line) {
+        return line.replace(baseIndent, '')
+      })
+      
+      var trimmed = lines.join('\n')
+      content.innerHTML = marked(trimmed)
+    </script>
+    
+    <script src="javascripts/rainbow.js"></script>
+    <script src="javascripts/generic.js"></script>
+    <script src="javascripts/javascript.js"></script>
+    <script type="text/javascript">
+    
+      var codeBlocks = document.querySelectorAll('code')
+          
+      Array.prototype.forEach.call(codeBlocks, function iterator(block) {
+        block.innerHTML = unescapeEntities(block.innerHTML)
+        block.setAttribute('data-language', 'javascript')
+      })
+      
+      Rainbow.color()
+      
+      // markdown is dumb and always escapes &, < and > with no way to override
+      function unescapeEntities(text) {
+        function un(text) {
+          var d = document.createElement("div")
+          d.innerHTML = text
+          return d.innerText || d.text || d.textContent
+        }
+        // need to unescape twice
+        // > -> &amp;gt; -> &gt; -> >
+        return un(un(text))
+      }
+      
+    </script>
+    
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34180924-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>
