@@ -65,7 +65,26 @@
                       
                       JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of variables (zero, one or many) and return either nothing (`undefined`) or exactly one variable (functions cant return two or more variables at a time). The `replace` function is available to use on any strings and takes in two variables: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
                       
-                      ![console](images/console-variables.png)
+                      ![console](images/console-replace.png)
+                      
+                      Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because `replace` (and most JavaScript functions for that matter) take in an existing variable and return a **new variable** instead of modifying the existing variable. Since we didn't store the new variable (there is no `=` on the left side of the replace function) it just printed out in our console.
+                      
+                      ### The "standard library"
+                      
+                      You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots **built in, standard libraries** that you can learn about at MDN (A site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+                      
+                      ### Third-party JavaScript
+                      
+                      There is also a lot of JavaScript code available that is **not built in**. JavaScript from third parties is usually referred to as a "library" or "plugin". One of my favorites is called **Underscore.js**. Let's go and grab it and load it into our page! First go to the Underscore site, [http://underscorejs.org/](http://underscorejs.org/), click on the download link (I usually use development versions because they are easier to read but both will give you the same basic functionality), and then copy all the code onto your clipboard (you can use Select All from the Edit menu to select everything).
+                      
+                      ![console](images/underscore-source.png)
+                      
+                      Then paste it into your console and hit enter. Now your browser has a new variable in it: `_`. Underscore gives you a ton of helpful functions to play with. We'll learn more about how to use them later.
+                      
+                      ![console](images/underscore-first.png)
+                      
+                      *JSForCats.com is a labor of love and work in progress by [@maxogden](http://twitter.com/maxogden). If you would like to contribute and make this tutorial better there is a Github repo [right over here](http://github.com/maxogden/javascript-for-cats).*
+                      
                     </div>
                   </div>
                 </div>
