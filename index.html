@@ -23,10 +23,10 @@
                 <div class="content-preview-wrapper">
                   <div class="content-preview">
                     <div class="post-content">
-                      # JavaScript For Cats
-                      ![cat](images/substack-cats.png)
-                      ## An introduction for new programmers
+                      <span class="bigTitle">JavaScript For Cats</span>
+                      ## An introduction for new programmers <span class="right">![cat](images/substack-cats.png)</span>
                       ### *So easy your human companion could do it too!*
+                      
                       <div class="loadingMessage">If this message never goes away then your browser is having some problems. <a href="javascript-for-cats-44498ac1199413e53ba4aacc807635bd33c24dc8.pdf">Here is a PDF version</a> you can read instead! You could also try coming back in the Google Chrome browser.</div>
                       
                       JavaScript is a programming language or, in other words, a means by which a computer is instructed to do things. Just the same as one controls humans with hisses and meows, one controls computers with statements written in a programming language. All web browsers understand JavaScript and you can take advantage of that to make web pages do crazy things!
@@ -37,7 +37,7 @@
                       
                       ## Don't be a scaredy cat
 
-                      You will always land on your feet -- even when programming! Unlike [pawing over a glass of water](images/dealwithit.gif) on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
+                      <span class="right">![cat](images/yarnify.png)</span>You will always land on your feet -- even when programming! Unlike [pawing over a glass of water](images/dealwithit.gif) on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
 
                       So don't be a scaredy cat! The absolute worst thing that will happen is that you might have the refresh this page in your web browser if you get stuck. Don't worry though, this will happen very rarely &mdash; and we're talkin' 13-toed cat rare.
 
@@ -215,7 +215,7 @@
       
       // kinda hacky but whatever
       var lines = content.innerHTML.split('\n')
-      var baseIndent = lines[1].split('#')[0]
+      var baseIndent = lines[1].split(/[^ ]/)[0]
       
       lines = lines.map(function iterator(line) {
         return line.replace(baseIndent, '')

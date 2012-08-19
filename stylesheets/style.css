@@ -1166,6 +1166,10 @@ ul.site li a {
   width: 450px;
   }
 
+.document .post-content .right {
+  float: right;
+}
+
 .document .cheatsheet-wrapper .content h2 {
   font-weight: 700;
   padding: 5px 0;
@@ -1212,7 +1216,9 @@ ul.site li a {
   font-weight: 700;
   border-bottom: 1px solid #d5e0e4;
   padding-bottom: 20px;
-  }
+}
+
+.post-content .bigTitle { font-size: 85px;}
 
 .post-content h1 { font-size: 36px; margin: 10px 0 20px 0; float: left; }
 .post-content h2 { font-size: 24px; margin: 10px 0 20px 0; font-weight: 700; padding: 0; clear: both; }
