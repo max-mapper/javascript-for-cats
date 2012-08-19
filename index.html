@@ -73,6 +73,22 @@
                       
                       If you simply type variable names into the console it will return the value stored in those variables. A note about variables is that by default they go away when you switch to a different page. If I were to hit the Refresh button in Chrome, for example, my `dogSentence` variable would get wiped and it would be like it never existed. But don't worry about this too much for now -- you can just hit the up or down arrows on your keyboard while in the console to go through everything you've entered in recently.
                       
+                      ### Arrays
+
+                      Need to keep track of all your cat friends? Well, an Array will do just fine. Think of an Array like an ordered list, you can keep tons of stuff in them.
+
+                      This is how you make one
+                      `var myCatFriends = ["tommy", "tabby", "sammy"]`
+
+                      Sweet now you have an awesome list of your cat buddies.
+
+                      Elements stored within `Arrays` start at 0 and count up from there. So `myCatFriends[0]` equals `tommy` and `myCatFriends[1]` equals `tabby`  .. ect ect.
+
+                      To get buddies out of your brand new Array you can just access the elements directly like so. `console.log(myCatFriends[0])` this will print out `tommy` in your console.
+
+                      All Array's have a length (or the number of elements within them) you can see this just by doing `myCatFriends.length` (which will equal 3 in this case).
+
+                      If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list, well you are in luck it is super simple. `myCatFriends.push("super hipster cat")`
                       ### Functions
                       
                       Now that we have our sentence stored in a variable lets give that variable to something that will replace words! We call things that perform actions like this **functions** because they... serve a function (or purpose) for us. Calling them "purposes" sounded weird I guess so they went with the word "function" instead.
