@@ -78,7 +78,7 @@
 
 </p>
 <h3>Variables</h3>
-<p>To store things we use things called <strong>variables</strong>. The word 'variable' means 'many' and is used because variables can store many different types of things. They are pretty much like mailboxes. We put something in a variable, like our sentence, and then give the variable an address that we can use to look up the sentence later. In real life mailboxes have to have PO Box numbers but in JavaScript you usually just use lowercase letters or numbers without any spaces.
+<p>To store things we use things called <strong>variables</strong>. The word 'variable' means 'can change' and is used because variables can store many different types of values and can change its value many times. They are pretty much like mailboxes. We put something in a variable, like our sentence, and then give the variable an address that we can use to look up the sentence later. In real life mailboxes have to have PO Box numbers but in JavaScript you usually just use lowercase letters or numbers without any spaces.
 
 </p>
 <p><img src="images/console-variables.png" alt="console">
@@ -90,24 +90,6 @@
 <p>If you simply type variable names into the console it will return the value stored in those variables. A note about variables is that by default they go away when you switch to a different page. If I were to hit the Refresh button in Chrome, for example, my <code data-language="javascript" class="rainbow">dogSentence</code> variable would get wiped and it would be like it never existed. But don't worry about this too much for now -- you can just hit the up or down arrows on your keyboard while in the console to go through everything you've entered in recently.
 
 </p>
-<!-- ### Arrays
-
-Need to keep track of all your cat friends? Well, an Array will do just fine. Think of an Array like an ordered list. You can keep tons of stuff in them.
-
-This is how you make one:
-
-    var myCatFriends = ["tommy", "tabby", "sammy"]
-
-Sweet now you have an awesome list of your cat buddies.
-
-Elements stored within `Arrays` start at 0 and count up from there. So `myCatFriends[0]` equals `tommy` and `myCatFriends[1]` equals `tabby`  ... etc etc.
-
-To get buddies out of your brand new Array you can just access the elements directly like so. `console.log(myCatFriends[0])` this will print out `tommy` in your console.
-
-All Arrays have a length (or the number of elements within them) you can see this just by doing `myCatFriends.length` (which will equal 3 in this case).
-
-If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list, well you are in luck it is super simple: `myCatFriends.push("super hip cat")`. -->
-
 <h3>Functions</h3>
 <p>Now that we have our sentence stored in a variable lets give that variable to something that will replace words! We call things that perform actions like this <strong>functions</strong> because, well, they serve a specific <em>function</em> (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
 
@@ -188,7 +170,7 @@ sentence <span class="keyword operator">=</span> <span class="function call">mak
   <span class="keyword">string</span> <span class="keyword operator">=</span> <span class="function call">makeMoreExciting</span>(<span class="keyword">string</span>)
   console.<span class="support method">log</span>(<span class="keyword">string</span>)
 }</code></pre>
-<p>This function, <code data-language="javascript" class="rainbow">yellIt</code>, uses our previous function <code data-language="javascript" class="rainbow">makeMoreExciting</code> as well as the built-in String method <code data-language="javascript" class="rainbow">toUpperCase</code>. Methods are just a name for a function when it belongs to something -- in this case <code data-language="javascript" class="rainbow">toUpperCase</code> is a function that belongs to <code data-language="javascript" class="rainbow"><span class="keyword">String</span></code> so we can refer to it as either a method <em>or</em> a function. <code data-language="javascript" class="rainbow">makeMoreExciting</code> on the other hand doesn't belong to anyone so it would be technically incorrect to refer to it as a method (confusing, I know).
+<p>This function, <code data-language="javascript" class="rainbow">yellIt</code>, uses our previous function <code data-language="javascript" class="rainbow">makeMoreExciting</code> as well as the built-in String method <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>. Methods are just a name for a function when it belongs to something -- in this case <code data-language="javascript" class="rainbow">toUpperCase</code> is a function that belongs to <code data-language="javascript" class="rainbow"><span class="keyword">String</span></code> so we can refer to it as either a method <em>or</em> a function. <code data-language="javascript" class="rainbow">makeMoreExciting</code> on the other hand doesn't belong to anyone so it would be technically incorrect to refer to it as a method (confusing, I know).
 
 </p>
 <p>The last line of the function is another built-in that simply takes in any variables that you give it and prints them out into the console.
@@ -216,9 +198,82 @@ console.<span class="support method">log</span>(<span class="function call">yell
 <p>This way <code data-language="javascript" class="rainbow">yellIt</code> becomes more <strong>generic</strong>, meaning it only does one or two simple little things and doesn't know anything about printing itself to a console -- that part can always be programmed later, outside the function definition.
 
 </p>
+<h3>Loops</h3>
+<p>Now that we have some basic skills under our belt (<em>Author note: do cats even wear belts?</em>) we can start being lazy. What?! Yes, that's right: programming is about being lazy. Larry Wall, inventor of the Perl programming language, called laziness the <a href="http://c2.com/cgi/wiki?LazinessImpatienceHubris">most important virtue</a> of a good programmer. If computers didn't exist you would have to do all sorts of tedious tasks by hand, but if you learn to program you can lay in the sun all day while a computer somewhere runs your programs for you. It is a glorious lifestyle filled with relaxation!
+
+</p>
+<p>Loops are one of the most important ways to harness the power of a computer. Remember <code data-language="javascript" class="rainbow">Underscore.js</code> from earlier? Make sure you have it loaded in the page (remember: you can just hit the up arrow on your keyboard a few times and then hit <code data-language="javascript" class="rainbow">Enter</code> to load it in again if you need to) and try copy/pasting this into your console:
+
+</p>
+<pre><code data-language="javascript" class="rainbow"><span class="storage function">function</span> <span class="entity name function">logANumber</span>(someNumber) {
+  console.<span class="support method">log</span>(someNumber)
+}
+_.<span class="function call">times</span>(<span class="constant numeric">10</span>, logANumber)</code></pre>
+<p>This code uses the <a href="http://underscorejs.org/#times">times</a> method of Underscore which takes in 1 number and 1 function and then starts from 0 and for 10 steps counts up by 1, calling the function with the number each step of the way.
+
+</p>
+<p><img src="images/times-loop.png" alt="console">
+
+</p>
+<p>If we were to manually write out what <code data-language="javascript" class="rainbow">times</code> is doing in the above code it would look like this:
+
+</p>
+<pre><code data-language="javascript" class="rainbow"><span class="function call">logANumber</span>(0)
+<span class="function call">logANumber</span>(1)
+<span class="function call">logANumber</span>(2)
+<span class="function call">logANumber</span>(3)
+<span class="function call">logANumber</span>(4)
+<span class="function call">logANumber</span>(5)
+<span class="function call">logANumber</span>(6)
+<span class="function call">logANumber</span>(7)
+<span class="function call">logANumber</span>(8)
+<span class="function call">logANumber</span>(9)</code></pre>
+<p>But cats refuse to do unnecessary manual work like this so we must always ask ourselves, <em>"am I doing this in the laziest way possible?"</em>.
+
+</p>
+<p>So why is this called looping? Think of it like this: If we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
+
+</p>
+<pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> zeroThroughTen <span class="keyword operator">=</span> [<span class="constant numeric">0</span>, <span class="constant numeric">1</span>, <span class="constant numeric">2</span>, <span class="constant numeric">3</span>, <span class="constant numeric">4</span>, <span class="constant numeric">5</span>, <span class="constant numeric">6</span>, <span class="constant numeric">7</span>, <span class="constant numeric">8</span>, <span class="constant numeric">9</span>]</code></pre>
+<p>What <code data-language="javascript" class="rainbow">times</code> really does is visit each number and repeat a task: in the example above the task was to call the <code data-language="javascript" class="rainbow">logANumber</code> function with the current number. Repeating tasks in this way is referred to as <em>looping over</em> the Array.
+
+</p>
+<h3>Arrays</h3>
+<p>  I've mentioned these a few times but let's spend a minute learning about them. Imagine you need to keep track of all your buddies. Well, an Array will do just fine. Think of an Array like a sorted list that you can keep <em>tons</em> of stuff in.
+
+</p>
+<p>  This is how you make one:
+
+</p>
+<pre><code data-language="javascript" class="rainbow">  <span class="keyword">var</span> myCatFriends <span class="keyword operator">=</span> [<span class="string">"tommy"</span>, <span class="string">"tabby"</span>, <span class="string">"ceiling"</span>]</code></pre>
+<p>  Sweet! Now you have a list of your cat buddies.
+
+</p>
+<p>  Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So <code data-language="javascript" class="rainbow">myCatFriends[<span class="constant numeric">0</span>]</code> returns <code data-language="javascript" class="rainbow">tommy</code> and <code data-language="javascript" class="rainbow">myCatFriends[<span class="constant numeric">1</span>]</code> returns <code data-language="javascript" class="rainbow">tabby</code>... etc etc.
+
+</p>
+<p>  To get buddies out of your brand new Array you can just access an element directly like so: 
+
+</p>
+<pre><code data-language="javascript" class="rainbow">  console.<span class="support method">log</span>(myCatFriends[<span class="constant numeric">0</span>])</code></pre>
+<p>  <img src="images/array-access.png" alt="console">
+
+</p>
+<p>  If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list it is super simple: <code data-language="javascript" class="rainbow">myCatFriends.<span class="support method">push</span>(<span class="string">"super hip cat"</span>)</code>.
+
+</p>
+<p>  To check that the new cat made it into your array you can use <code data-language="javascript" class="rainbow">.<span class="support property">length</span></code>:
+
+</p>
+<p>  <img src="images/array-push-length.png" alt="console">
+
+</p>
+<p>  Notice how <code data-language="javascript" class="rainbow">push</code> returned the length? Handy! Also take note that arrays will always <strong>preserve ordering</strong> which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
+
+</p>
 <h3>That is the end for now, but here's what I'm working on:</h3>
 <ul>
-<li>Looping</li>
+<li>More crazy looping!</li>
 <li>Objects and JSON!</li>
 <li>Grabbing stuff from other pages on the internet and displaying it</li>
 <li>How to use Github to find and share code</li>
@@ -230,6 +285,14 @@ console.<span class="support method">log</span>(<span class="function call">yell
 <p>I'd recommend coming back again tomorrow and going through the entire thing again from the beginning! It might take a few times through before you get everything (programming is hard). Just try to avoid reading this page in any rooms that contain shiny objects... they can be incredibly distracting.
 
 </p>
+<h3>Recommended reading</h3>
+<p>  JavaScript For Cats skips over lots of details that aren't important for getting started (cats are not known for their attention spans), but if you feel like you need to dive in deeper then check these out:
+
+</p>
+<ul>
+<li><a href="http://eloquentjavascript.net/">Eloquent Javascript</a> is a free book that teaches you JavaScript! It's pretty good! Especially the chapter on <a href="http://eloquentjavascript.net/chapter2.html">values, variables, and control flow</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide">Mozilla's JavaScript Guide</a> also has a pretty sweet intro chapter called <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals">values, variables and literals</a></li>
+</ul>
 <!-- function isItPastDinner() { if (new Date().getHours()) } -->
 
 <p><em>JSForCats.com is a labor of love and work in progress by <a href="http://twitter.com/maxogden">@maxogden</a>. If you would like to contribute and make this tutorial better there is a Github repo <a href="http://github.com/maxogden/javascript-for-cats">right over here</a>. Bonus: <a href="javascript-for-cats.pdf">Here is a PDF version</a> of JSForCats.</em>

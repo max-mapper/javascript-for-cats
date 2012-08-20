@@ -28,7 +28,7 @@
                       ### *So easy your human companion could do it too!*
                       
                       <div class="loadingMessage">If this message never goes away then your browser is having some problems. <a href="javascript-for-cats.pdf">Here is a PDF version</a> you can read instead! You could also try coming back in the Google Chrome browser.</div>
-                      
+
                       JavaScript is a programming language or, in other words, a means by which a computer is instructed to do things. Just the same as one controls humans with hisses and meows, one controls computers with statements written in a programming language. All web browsers understand JavaScript and you can take advantage of that to make web pages do crazy things!
                       
                       JavaScript started as a programming language to make internet pages more interactive. Nowadays JavaScript runs in more places than just in web browsers -- it runs on web servers, phones and [even robots](http://jsfiddle.net/rwaldron/WZkn5/show/light/)! This page will teach you some JavaScript basics so that you can get up and running in no time*!
@@ -67,31 +67,13 @@
                       
                       ### Variables
                       
-                      To store things we use things called **variables**. The word 'variable' means 'many' and is used because variables can store many different types of things. They are pretty much like mailboxes. We put something in a variable, like our sentence, and then give the variable an address that we can use to look up the sentence later. In real life mailboxes have to have PO Box numbers but in JavaScript you usually just use lowercase letters or numbers without any spaces.
+                      To store things we use things called **variables**. The word 'variable' means 'can change' and is used because variables can store many different types of values and can change its value many times. They are pretty much like mailboxes. We put something in a variable, like our sentence, and then give the variable an address that we can use to look up the sentence later. In real life mailboxes have to have PO Box numbers but in JavaScript you usually just use lowercase letters or numbers without any spaces.
                       
                       ![console](images/console-variables.png)
                       
                       `var` is shorthand for variable and the `=` means *store the thing on the right hand side in the thing on the left hand side*. Also as you can see, now that we are storing our sentence in a variable the console doesn't just return our sentence right away, but instead gives us `undefined` which means *there was nothing to return*.
                       
                       If you simply type variable names into the console it will return the value stored in those variables. A note about variables is that by default they go away when you switch to a different page. If I were to hit the Refresh button in Chrome, for example, my `dogSentence` variable would get wiped and it would be like it never existed. But don't worry about this too much for now -- you can just hit the up or down arrows on your keyboard while in the console to go through everything you've entered in recently.
-                      
-                      <!-- ### Arrays
-                      
-                      Need to keep track of all your cat friends? Well, an Array will do just fine. Think of an Array like an ordered list. You can keep tons of stuff in them.
-                      
-                      This is how you make one:
-                      
-                          var myCatFriends = ["tommy", "tabby", "sammy"]
-                      
-                      Sweet now you have an awesome list of your cat buddies.
-                      
-                      Elements stored within `Arrays` start at 0 and count up from there. So `myCatFriends[0]` equals `tommy` and `myCatFriends[1]` equals `tabby`  ... etc etc.
-                      
-                      To get buddies out of your brand new Array you can just access the elements directly like so. `console.log(myCatFriends[0])` this will print out `tommy` in your console.
-                      
-                      All Arrays have a length (or the number of elements within them) you can see this just by doing `myCatFriends.length` (which will equal 3 in this case).
-                      
-                      If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list, well you are in luck it is super simple: `myCatFriends.push("super hip cat")`. -->
                       
                       ### Functions
                       
@@ -158,7 +140,7 @@
                             console.log(string)
                           }
                       
-                      This function, `yellIt`, uses our previous function `makeMoreExciting` as well as the built-in String method `toUpperCase`. Methods are just a name for a function when it belongs to something -- in this case `toUpperCase` is a function that belongs to `String` so we can refer to it as either a method *or* a function. `makeMoreExciting` on the other hand doesn't belong to anyone so it would be technically incorrect to refer to it as a method (confusing, I know).
+                      This function, `yellIt`, uses our previous function `makeMoreExciting` as well as the built-in String method [toUpperCase](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase). Methods are just a name for a function when it belongs to something -- in this case `toUpperCase` is a function that belongs to `String` so we can refer to it as either a method *or* a function. `makeMoreExciting` on the other hand doesn't belong to anyone so it would be technically incorrect to refer to it as a method (confusing, I know).
                       
                       The last line of the function is another built-in that simply takes in any variables that you give it and prints them out into the console.
                       
@@ -180,9 +162,71 @@
                       
                       This way `yellIt` becomes more **generic**, meaning it only does one or two simple little things and doesn't know anything about printing itself to a console -- that part can always be programmed later, outside the function definition.
                       
+                      ### Loops
+                      
+                      Now that we have some basic skills under our belt (*Author note: do cats even wear belts?*) we can start being lazy. What?! Yes, that's right: programming is about being lazy. Larry Wall, inventor of the Perl programming language, called laziness the [most important virtue](http://c2.com/cgi/wiki?LazinessImpatienceHubris) of a good programmer. If computers didn't exist you would have to do all sorts of tedious tasks by hand, but if you learn to program you can lay in the sun all day while a computer somewhere runs your programs for you. It is a glorious lifestyle filled with relaxation!
+                      
+                      Loops are one of the most important ways to harness the power of a computer. Remember `Underscore.js` from earlier? Make sure you have it loaded in the page (remember: you can just hit the up arrow on your keyboard a few times and then hit `Enter` to load it in again if you need to) and try copy/pasting this into your console:
+                        
+                          function logANumber(someNumber) {
+                            console.log(someNumber)
+                          }
+                          _.times(10, logANumber)
+                      
+                      This code uses the [times](http://underscorejs.org/#times) method of Underscore which takes in 1 number and 1 function and then starts from 0 and for 10 steps counts up by 1, calling the function with the number each step of the way.
+                      
+                      ![console](images/times-loop.png)
+                      
+                      If we were to manually write out what `times` is doing in the above code it would look like this:
+                      
+                          logANumber(0)
+                          logANumber(1)
+                          logANumber(2)
+                          logANumber(3)
+                          logANumber(4)
+                          logANumber(5)
+                          logANumber(6)
+                          logANumber(7)
+                          logANumber(8)
+                          logANumber(9)
+
+                      But cats refuse to do unnecessary manual work like this so we must always ask ourselves, *"am I doing this in the laziest way possible?"*.
+                      
+                      So why is this called looping? Think of it like this: If we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
+                      
+                          var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                      
+                      What `times` really does is visit each number and repeat a task: in the example above the task was to call the `logANumber` function with the current number. Repeating tasks in this way is referred to as *looping over* the Array.
+                      
+                        ### Arrays
+
+                        I've mentioned these a few times but let's spend a minute learning about them. Imagine you need to keep track of all your buddies. Well, an Array will do just fine. Think of an Array like a sorted list that you can keep *tons* of stuff in.
+
+                        This is how you make one:
+
+                            var myCatFriends = ["tommy", "tabby", "ceiling"]
+
+                        Sweet! Now you have a list of your cat buddies.
+
+                        Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `tommy` and `myCatFriends[1]` returns `tabby`... etc etc.
+                        
+                        To get buddies out of your brand new Array you can just access an element directly like so: 
+                        
+                            console.log(myCatFriends[0])
+                        
+                        ![console](images/array-access.png)
+
+                        If you made a brand new cat friend at the hippest cat club the other night and you want to add them to your list it is super simple: `myCatFriends.push("super hip cat")`.
+                        
+                        To check that the new cat made it into your array you can use `.length`:
+                        
+                        ![console](images/array-push-length.png)
+                        
+                        Notice how `push` returned the length? Handy! Also take note that arrays will always **preserve ordering** which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
+                      
                       ### That is the end for now, but here's what I'm working on:
                         
-                        - Looping
+                        - More crazy looping!
                         - Objects and JSON!
                         - Grabbing stuff from other pages on the internet and displaying it
                         - How to use Github to find and share code
@@ -191,6 +235,13 @@
                       Got another topic you wanna see covered? Open an issue for it [on github](http://github.com/maxogden/javascript-for-cats).
                       
                       I'd recommend coming back again tomorrow and going through the entire thing again from the beginning! It might take a few times through before you get everything (programming is hard). Just try to avoid reading this page in any rooms that contain shiny objects... they can be incredibly distracting.
+                      
+                      ### Recommended reading
+                      
+                        JavaScript For Cats skips over lots of details that aren't important for getting started (cats are not known for their attention spans), but if you feel like you need to dive in deeper then check these out:
+                        
+                        - [Eloquent Javascript](http://eloquentjavascript.net/) is a free book that teaches you JavaScript! It's pretty good! Especially the chapter on [values, variables, and control flow](http://eloquentjavascript.net/chapter2.html)
+                        - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide) also has a pretty sweet intro chapter called [values, variables and literals](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals)
                       
                       <!-- function isItPastDinner() { if (new Date().getHours()) } -->
                       
