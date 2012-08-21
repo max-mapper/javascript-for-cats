@@ -225,7 +225,35 @@
                         ![console](images/array-push-length.png)
                         
                         Notice how `push` returned the length? Handy! Also take note that arrays will always **preserve ordering** which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
-                      
+
+                      ### <a id="loops" href="#loops">#</a> Crazy Loops
+
+                      Now that you have a handle on Arrays and basic looping, lets try some more fun ones.
+                      Lets say we have an Array that keeps track of things us cats like to do
+
+                      `var thingsToDo = ['sleep', 'eat', 'sit in the sun', 'drink', 'bother humans']`
+
+                      Lets use our friends array and output each cats name next to each of the actions.
+
+                          _.each(myCatFriends, function(friend) {
+                            _.each(thingsToDo, function(todo) {
+                              console.log(friend + " likes to " + todo);
+                            }
+                          });
+
+                      pretty neat eh?!
+
+                      ### <a id="randoms" href="#randoms">#</a> Random Numbers
+
+                      Want to mix up your day to day cat life? Why not add some randomness into your day.
+                      Luckily javascript lets us do this with ease.
+
+                      Lets choose a random thing to do for the day using the thingsToDo array we defined earlier.
+
+                          console.log("time to " + _.shuffle(thingsToDo)[0])
+
+                      run this a few times, you should now have random things to do!
+
                       ### That is the end for now, but here's what I'm working on:
                         
                         - More crazy looping!
