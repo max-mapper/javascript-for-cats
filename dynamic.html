@@ -46,6 +46,7 @@
                       - [Writing new functions](#writing-functions)
                       - [Loops](#loops)
                       - [Arrays](#arrays)
+                      - [Objects](#objects)
                       - [Recommended reading](#recommended-reading)
                       
                       ## Don't be a scaredy cat
@@ -238,11 +239,75 @@
                         ![console](images/array-push-length.png)
                         
                         Notice how `push` returned the length? Handy! Also take note that arrays will always **preserve ordering** which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering so remember this special property of Arrays!
+                        
+                      ### <a id="objects" href="#objects">#</a> Objects
+                      
+                      Arrays are good for lists, but for other tasks they can be hard to work with. Consider our array of cat friends. What if you also wanted to store more than just names?
+                      
+                          var myCatFriends = ["tommy", "tabby", "ceiling"]
+                          var lastNames = ["the cat", "cat", "cat"]
+                          var addresses = ["The Alley", "Grandmas House", "Attic"]
+                      
+                      Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, lets say tommy, and you just want to look up that cats address. With arrays it takes a lot of work because you can't just say 'hey array, give me tommys address' because 'tommy' is in one array and his address is in a totally different array.
+                      
+                      ![console](images/array-lookup.png)
+                      
+                      This can be brittle because if our arrays change and we add a new cat to the beginning we would have to also update our `tommysPosition` variable to point to the new location of tommys information in the arrays! Here is a easier to maintain way to store information like this using objects:
+                      
+                          var firstCat = { name: "tommy", lastName: "the cat", address: "The Alley" }
+                          var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
+                          var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
+                        
+                      Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way. 
+                      
+                      ![console](images/object-lookup.png)
+                      
+                      You can think of Objects like keys on a keyring. Each one is for a specific door and if you have nice labels on your keys you can open doors very fast. In fact, the things on the left hand side of the `:` are called **keys** the things on the right side are **properties** (you can also just call them values). You can remember this because you use your keys to get access to your properties, just like owning a house!
+                      
+                          // an object with a single key 'name' and single value/property 'tommy'
+                          { name: 'tommy' }
+                      
+                      So why would you ever use arrays if you can just put your data in objects? Because objects don't remember the order of the keys that you set. You might enter in an object like this:
+                      
+                          { date: "10/20/2012", diary: "slept a bit today", name: "Charles" }
+                      
+                      But the computer could give it back to you like this:
+                      
+                          { diary: "slept a bit today", name: "Charles", date: "10/20/2012" }
+                      
+                      Or like this!
+                      
+                          { name: "Charles", diary: "slept a bit today", date: "10/20/2012" }
+                      
+                      So you can't ever trust the order of keys in objects. If you wanna get REALLY fancy you can make an array filled with objects, or an object filled with arrays!
+                      
+                          var moodLog = [
+                            {
+                              date: "10/20/2012",
+                              mood: "catnipped"
+                            }, 
+                            {
+                              date: "10/21/2012",
+                              mood: "nonplussed"
+                            },
+                            {
+                              date: "10/22/2012",
+                              mood: "purring"
+                            }
+                          ]
+                          
+                          // ordered from least to most favorite
+                          var favorites = {
+                            treats: ["bird sighting", "belly rub", "catnip"],
+                            napSpots: ["couch", "planter box", "human face"]
+                          }
+                          
+                      When you combine different things like this you are making **data structures**, just like legos!
                       
                       ### That is the end for now, but here's what I'm working on:
                         
                         - More crazy looping!
-                        - Objects and JSON!
+                        - JSON!
                         - Grabbing stuff from other pages on the internet and displaying it
                         - How to use Github to find and share code
                         - Node.js and server side catgramming
@@ -329,3 +394,16 @@
     </script>
   </body>
 </html>
+
+<!-- var firstCatName = myCatFriends[0]
+var firstCatLastName = lastNames[0]
+var firstCatAddress = addresses[0]
+var secondCatName = myCatFriends[1]
+var secondCatLastName = lastNames[1]
+var secondCatAddress = addresses[1]
+var thirdCatName = myCatFriends[2]
+var thirdCatLastName = lastNames[2]
+var thirdCatAddress = addresses[3]
+
+console.log(firstCatName, firstCatLastName, firstCatAddress)
+// tommy the cat The Alley -->
