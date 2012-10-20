@@ -23,364 +23,366 @@
 <div class="content-preview-wrapper">
 <div class="content-preview">
 <div class="post-content" style="white-space: normal;">
-<p><span class="bigTitle">JavaScript For Cats</span>
+  <p><span class="bigTitle">JavaScript For Cats</span>
 
-</p>
+  </p>
 
 <h2>An introduction for new programmers <span class="right"><img src="images/substack-cats.png" alt="cat"></span></h2>
 
 
 <h3><em>So easy your human companion could do it too!</em></h3>
 
-<p>JavaScript is a programming language or, in other words, a means by which
-  a computer is instructed to do things. Just the same as one controls humans
-  with hisses and meows, one controls computers with statements written in
-  a programming language. All web browsers understand JavaScript and you
-  can take advantage of that to make web pages do crazy things!</p>
-<p>JavaScript started as a programming language to make internet pages more
-  interactive. Nowadays JavaScript runs in more places than just in web browsers
-  -- it runs on web servers, phones and <a href="http://jsfiddle.net/rwaldron/WZkn5/show/light/">even robots</a>!
-  This page will teach you some JavaScript basics so that you can get up
-  and running in no time*!</p>
-<p>* <em>actual time: more than none. probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun</em>
+  <p>JavaScript is a programming language or, in other words, a means by which
+    a computer is instructed to do things. Just the same as one controls humans
+    with hisses and meows, one controls computers with statements written in
+    a programming language. All web browsers understand JavaScript and you
+    can take advantage of that to make web pages do crazy things!</p>
+  <p>JavaScript started as a programming language to make internet pages more
+    interactive. Nowadays JavaScript runs in more places than just in web browsers
+    -- it runs on web servers, phones and <a href="http://jsfiddle.net/rwaldron/WZkn5/show/light/">even robots</a>!
+    This page will teach you some JavaScript basics so that you can get up
+    and running in no time*!</p>
+  <p>* <em>actual time: more than none. probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun</em>
 
-</p>
+  </p>
 
 <h2>Table of contents</h2>
 
-<ul>
-  <li><a href="#basics">The console</a>
-  </li>
-  <li><a href="#strings">Strings</a>
-  </li>
-  <li><a href="#values">Values and variables</a>
-  </li>
-  <li><a href="#functions">Using functions</a>
-  </li>
-  <li><a href="#standard-library">Built in JS functions</a>
-  </li>
-  <li><a href="#third-party-javascript">Download new JS functions</a>
-  </li>
-  <li><a href="#writing-functions">Writing new functions</a>
-  </li>
-  <li><a href="#loops">Loops</a>
-  </li>
-  <li><a href="#arrays">Arrays</a>
-  </li>
-  <li><a href="#recommended-reading">Recommended reading</a>
-  </li>
-</ul>
+  <ul>
+    <li><a href="#basics">The console</a>
+    </li>
+    <li><a href="#strings">Strings</a>
+    </li>
+    <li><a href="#values">Values and variables</a>
+    </li>
+    <li><a href="#functions">Using functions</a>
+    </li>
+    <li><a href="#standard-library">Built in JS functions</a>
+    </li>
+    <li><a href="#third-party-javascript">Download new JS functions</a>
+    </li>
+    <li><a href="#writing-functions">Writing new functions</a>
+    </li>
+    <li><a href="#loops">Loops</a>
+    </li>
+    <li><a href="#arrays">Arrays</a>
+    </li>
+    <li><a href="#objects">Objects</a>
+    </li>
+    <li><a href="#recommended-reading">Recommended reading</a>
+    </li>
+  </ul>
 
 <h2>Don't be a scaredy cat</h2>
 
-<p><span class="right"><img src="images/yarnify.png" alt="cat"></span>You
-  will always land on your feet -- even when programming! Unlike <a href="images/dealwithit.gif">pawing over a glass of water</a> on
-  your laptop, <em>nothing</em> in these tutorials will damage your computer
-  in any way, even if you mistype a command or click the wrong button. Like
-  cats, computer programmers make mistakes all time: misspelling things,
-  forgetting quotes or brackets, and being forgetful of how basic functions
-  (and yarn) work. Programmers care more about making it work <em>eventually</em> rather
-  than trying to make it work the very first time. The best way to learn
-  is by making mistakes!</p>
-<p>So don't be a scaredy cat! The absolute worst thing that will happen is
-  that you might have the refresh this page in your web browser if you get
-  stuck. Don't worry though, this will happen very rarely — and we're talkin'
-  13-toed cat rare.</p>
+  <p><span class="right"><img src="images/yarnify.png" alt="cat"></span>You
+    will always land on your feet -- even when programming! Unlike <a href="images/dealwithit.gif">pawing over a glass of water</a> on
+    your laptop, <em>nothing</em> in these tutorials will damage your computer
+    in any way, even if you mistype a command or click the wrong button. Like
+    cats, computer programmers make mistakes all time: misspelling things,
+    forgetting quotes or brackets, and being forgetful of how basic functions
+    (and yarn) work. Programmers care more about making it work <em>eventually</em> rather
+    than trying to make it work the very first time. The best way to learn
+    is by making mistakes!</p>
+  <p>So don't be a scaredy cat! The absolute worst thing that will happen is
+    that you might have the refresh this page in your web browser if you get
+    stuck. Don't worry though, this will happen very rarely ÔøΩ and we're talkin'
+    13-toed cat rare.</p>
 
 <h2><a id="basics" href="#basics">#</a> The basics</h2>
 
-<p>There is JavaScript running on this page right now! Let's play around
-  with it a little. For the sake of simplicity I'll assume you are using
-  Google Chrome to read this page (if you aren't its probably easier on both
-  of us if you follow along with Chrome).</p>
-<p>First, right click anywhere on the screen and hit <strong>Inspect Element</strong>,
-  then click on the <strong>Console</strong> tab. You should see a thingy that
-  looks like this:</p>
-<p>
-  <img src="images/console.png" alt="console">
-</p>
-<p>This is a console, otherwise known as a "command line" or "terminal".
-  Basically its a way to type one thing at a time into a computer and immediately
-  get the computers answer back. They are super useful as a learning tool
-  (I still use a the console nearly every day I'm coding).</p>
-<p>The console does some pretty cool stuff. Here I have started to type something
-  and the console is helping me out by giving me a list of all the possible
-  things I could continue to type! Another thing you could do is type
-  <code
-  data-language="javascript" class="rainbow"><span class="constant numeric">1</span>  <span class="keyword operator">+</span> 
-    <span
-    class="constant numeric">1</span>
-      </code>into the console and then hit the <code data-language="javascript" class="rainbow">Enter</code> key
-      and watch what happens.</p>
-<p>Using the console is a very important part of learning JavaScript. If
-  you don't know if something works or what the command is for something,
-  go to the console and figure it out! Here's an example:</p>
+  <p>There is JavaScript running on this page right now! Let's play around
+    with it a little. For the sake of simplicity I'll assume you are using
+    Google Chrome to read this page (if you aren't its probably easier on both
+    of us if you follow along with Chrome).</p>
+  <p>First, right click anywhere on the screen and hit <strong>Inspect Element</strong>,
+    then click on the <strong>Console</strong> tab. You should see a thingy that
+    looks like this:</p>
+  <p>
+    <img src="images/console.png" alt="console">
+  </p>
+  <p>This is a console, otherwise known as a "command line" or "terminal".
+    Basically its a way to type one thing at a time into a computer and immediately
+    get the computers answer back. They are super useful as a learning tool
+    (I still use a the console nearly every day I'm coding).</p>
+  <p>The console does some pretty cool stuff. Here I have started to type something
+    and the console is helping me out by giving me a list of all the possible
+    things I could continue to type! Another thing you could do is type
+    <code
+    data-language="javascript" class="rainbow"><span class="constant numeric">1</span>  <span class="keyword operator">+</span> 
+      <span
+      class="constant numeric">1</span>
+        </code>into the console and then hit the <code data-language="javascript" class="rainbow">Enter</code> key
+        and watch what happens.</p>
+  <p>Using the console is a very important part of learning JavaScript. If
+    you don't know if something works or what the command is for something,
+    go to the console and figure it out! Here's an example:</p>
 
 <h3><a id="strings" href="#strings">#</a> Strings</h3>
 
-<p>Since I am a cat I want to replace every instance of the word <code data-language="javascript"
-  class="rainbow">dog</code> on the internet with <code data-language="javascript"
-  class="rainbow">those blasted dogs</code>. First go into your console and
-  type in a few sentences that contain the word <code data-language="javascript"
-  class="rainbow">dog</code> at least once. In JavaScript a bunch of letters,
-  numbers, words or anything else is known as a <strong>String</strong> (as
-  in a <em>string</em> of characters). Strings have to begin AND end with a
-  quotation mark. Single <code data-language="javascript" class="rainbow">'</code> or
-  double <code data-language="javascript" class="rainbow">"</code> is fine,
-  just make sure you use the same at the beginning as you do at the end.</p>
-<p>
-  <img src="images/console-strings.png" alt="console">
-</p>
-<p>See the nasty error message? Don't worry - you didn't break any laws.
-  SyntaxError ILLEGAL is just the way it sounds when robots tell you that
-  your program has a problem. The first two sentences had matching quotation
-  marks at the beginning and end, but when I mixed single and double quotation
-  marks it freaked out on me.</p>
-<p>Ok, to fix up one of these sentences (by replacing <code data-language="javascript"
-  class="rainbow">dog</code> with our enhanced version) we have to first save
-  the original sentence so that we can call it up later when we do our replacing
-  magic. Notice how the string gets repeated in red when we type it into
-  the console? This is because we haven't told it to save the sentence anywhere
-  so it just gives it right back (or it gives us an Error back if we messed
-  something up).</p>
+  <p>Since I am a cat I want to replace every instance of the word <code data-language="javascript"
+    class="rainbow">dog</code> on the internet with <code data-language="javascript"
+    class="rainbow">those blasted dogs</code>. First go into your console and
+    type in a few sentences that contain the word <code data-language="javascript"
+    class="rainbow">dog</code> at least once. In JavaScript a bunch of letters,
+    numbers, words or anything else is known as a <strong>String</strong> (as
+    in a <em>string</em> of characters). Strings have to begin AND end with a
+    quotation mark. Single <code data-language="javascript" class="rainbow">'</code> or
+    double <code data-language="javascript" class="rainbow">"</code> is fine,
+    just make sure you use the same at the beginning as you do at the end.</p>
+  <p>
+    <img src="images/console-strings.png" alt="console">
+  </p>
+  <p>See the nasty error message? Don't worry - you didn't break any laws.
+    SyntaxError ILLEGAL is just the way it sounds when robots tell you that
+    your program has a problem. The first two sentences had matching quotation
+    marks at the beginning and end, but when I mixed single and double quotation
+    marks it freaked out on me.</p>
+  <p>Ok, to fix up one of these sentences (by replacing <code data-language="javascript"
+    class="rainbow">dog</code> with our enhanced version) we have to first save
+    the original sentence so that we can call it up later when we do our replacing
+    magic. Notice how the string gets repeated in red when we type it into
+    the console? This is because we haven't told it to save the sentence anywhere
+    so it just gives it right back (or it gives us an Error back if we messed
+    something up).</p>
 
 <h3><a id="values" href="#values">#</a> Values and variables</h3>
 
-<p><strong>Values</strong> are the simplest components in JavaScript.
-  <code
-  data-language="javascript" class="rainbow"><span class="constant numeric">1</span>
-    </code>is a value, <code data-language="javascript" class="rainbow"><span class="constant language">true</span></code> is
-    a value, <code data-language="javascript" class="rainbow">"hello"</code> is
-    a value, <code data-language="javascript" class="rainbow"><span class="keyword">function</span>() {}</code> is
-    a value, the list goes on! There are a handful of different <strong>types</strong> of
-    values in JavaScript but we don't need to go over them all right away --
-    you will learn them naturally the more you code!</p>
-<p>To store values we use things called <strong>variables</strong>. The word
-  'variable' means 'can change' and is used because variables can store many
-  different types of values and can change their value many times. They are
-  pretty much like mailboxes. We put something in a variable, like our sentence,
-  and then give the variable an address that we can use to look up the sentence
-  later. In real life mailboxes have to have PO Box numbers but in JavaScript
-  you usually just use lowercase letters or numbers without any spaces.</p>
-<p>
-  <img src="images/console-variables.png" alt="console">
-</p>
-<p><code data-language="javascript" class="rainbow"><span class="keyword">var</span></code> is
-  shorthand for variable and the <code data-language="javascript" class="rainbow"><span class="keyword operator">=</span></code> means <em>store the thing on the right hand side in the thing on the left hand side</em>.
-  Also as you can see, now that we are storing our sentence in a variable
-  the console doesn't just return our sentence right away, but instead gives
-  us <code data-language="javascript" class="rainbow">undefined</code> which
-  means <em>there was nothing to return</em>.</p>
-<p>If you simply type a variable name into the console it will print out
-  the value stored in that variable. A note about variables is that by default
-  they go away when you switch to a different page. If I were to hit the
-  Refresh button in Chrome, for example, my <code data-language="javascript"
-  class="rainbow">dogSentence</code> variable would get wiped and it would
-  be like it never existed. But don't worry about this too much for now --
-  you can just hit the up or down arrows on your keyboard while in the console
-  to go through everything you've entered in recently.</p>
+  <p><strong>Values</strong> are the simplest components in JavaScript.
+    <code
+    data-language="javascript" class="rainbow"><span class="constant numeric">1</span>
+      </code>is a value, <code data-language="javascript" class="rainbow"><span class="constant language">true</span></code> is
+      a value, <code data-language="javascript" class="rainbow">"hello"</code> is
+      a value, <code data-language="javascript" class="rainbow"><span class="keyword">function</span>() {}</code> is
+      a value, the list goes on! There are a handful of different <strong>types</strong> of
+      values in JavaScript but we don't need to go over them all right away --
+      you will learn them naturally the more you code!</p>
+  <p>To store values we use things called <strong>variables</strong>. The word
+    'variable' means 'can change' and is used because variables can store many
+    different types of values and can change their value many times. They are
+    pretty much like mailboxes. We put something in a variable, like our sentence,
+    and then give the variable an address that we can use to look up the sentence
+    later. In real life mailboxes have to have PO Box numbers but in JavaScript
+    you usually just use lowercase letters or numbers without any spaces.</p>
+  <p>
+    <img src="images/console-variables.png" alt="console">
+  </p>
+  <p><code data-language="javascript" class="rainbow"><span class="keyword">var</span></code> is
+    shorthand for variable and the <code data-language="javascript" class="rainbow"><span class="keyword operator">=</span></code> means <em>store the thing on the right hand side in the thing on the left hand side</em>.
+    Also as you can see, now that we are storing our sentence in a variable
+    the console doesn't just return our sentence right away, but instead gives
+    us <code data-language="javascript" class="rainbow">undefined</code> which
+    means <em>there was nothing to return</em>.</p>
+  <p>If you simply type a variable name into the console it will print out
+    the value stored in that variable. A note about variables is that by default
+    they go away when you switch to a different page. If I were to hit the
+    Refresh button in Chrome, for example, my <code data-language="javascript"
+    class="rainbow">dogSentence</code> variable would get wiped and it would
+    be like it never existed. But don't worry about this too much for now --
+    you can just hit the up or down arrows on your keyboard while in the console
+    to go through everything you've entered in recently.</p>
 
 <h3><a id="functions" href="#functions">#</a> Functions</h3>
 
-<p>Now that we have our sentence stored in a variable lets give that variable
-  to something that will replace words! We call things that perform actions
-  like this <strong>functions</strong> because, well, they serve a specific <em>function</em> (AKA
-  purpose or action) for us. Calling them "actions" sounded weird I guess
-  so they went with the word "function" instead.</p>
-<p>JavaScript has a function called <code data-language="javascript" class="rainbow">replace</code> that
-  does exactly what we want! Functions take in any number of values (zero,
-  one or many) and return either nothing (<code data-language="javascript"
-  class="rainbow">undefined</code>) or exactly one value (functions can't
-  return two or more values at a time -- only a single value). The <code data-language="javascript"
-  class="rainbow">replace</code> function is available to use on any strings
-  and takes in two values: the characters to take out and the characters
-  to swap in. It gets confusing to describe these things so here is a visual
-  example:</p>
-<p>
-  <img src="images/console-replace.png" alt="console">
-</p>
-<p>Notice how the value of <code data-language="javascript" class="rainbow">dogSentence</code> is
-  the same even after we run <code data-language="javascript" class="rainbow">replace</code> on
-  it? This is because <code data-language="javascript" class="rainbow">replace</code> (and
-  most JavaScript functions for that matter) takes the variable or value
-  that we give it and returns a <strong>new value</strong> instead of modifying
-  the thing we passed in. Since we didn't store the new variable (there is
-  no <code data-language="javascript" class="rainbow"><span class="keyword operator">=</span></code> on
-  the left side of the replace function) it just printed out the return value
-  in our console.</p>
+  <p>Now that we have our sentence stored in a variable lets give that variable
+    to something that will replace words! We call things that perform actions
+    like this <strong>functions</strong> because, well, they serve a specific <em>function</em> (AKA
+    purpose or action) for us. Calling them "actions" sounded weird I guess
+    so they went with the word "function" instead.</p>
+  <p>JavaScript has a function called <code data-language="javascript" class="rainbow">replace</code> that
+    does exactly what we want! Functions take in any number of values (zero,
+    one or many) and return either nothing (<code data-language="javascript"
+    class="rainbow">undefined</code>) or exactly one value (functions can't
+    return two or more values at a time -- only a single value). The <code data-language="javascript"
+    class="rainbow">replace</code> function is available to use on any strings
+    and takes in two values: the characters to take out and the characters
+    to swap in. It gets confusing to describe these things so here is a visual
+    example:</p>
+  <p>
+    <img src="images/console-replace.png" alt="console">
+  </p>
+  <p>Notice how the value of <code data-language="javascript" class="rainbow">dogSentence</code> is
+    the same even after we run <code data-language="javascript" class="rainbow">replace</code> on
+    it? This is because <code data-language="javascript" class="rainbow">replace</code> (and
+    most JavaScript functions for that matter) takes the variable or value
+    that we give it and returns a <strong>new value</strong> instead of modifying
+    the thing we passed in. Since we didn't store the new variable (there is
+    no <code data-language="javascript" class="rainbow"><span class="keyword operator">=</span></code> on
+    the left side of the replace function) it just printed out the return value
+    in our console.</p>
 
 <h3><a id="standard-library" href="#standard-library">#</a> The "standard library"</h3>
 
-<p>You might be wondering what other functions are available in JavaScript.
-  The answer: A TON. There are lots <strong>built in, standard libraries</strong> that
-  you can learn about at MDN (A site run by Mozilla that has lotsa nifty
-  information about web technologies). For example <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math">here is the MDN page on JavaScript's Math object</a>.</p>
+  <p>You might be wondering what other functions are available in JavaScript.
+    The answer: A TON. There are lots <strong>built in, standard libraries</strong> that
+    you can learn about at MDN (A site run by Mozilla that has lotsa nifty
+    information about web technologies). For example <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math">here is the MDN page on JavaScript's Math object</a>.</p>
 
 <h3><a id="third-party-javascript" href="#third-party-javascript">#</a> Third-party JavaScript</h3>
 
-<p>There is also a lot of JavaScript code available that is <strong>not built in</strong>.
-  JavaScript from third parties is usually referred to as a "library" or
-  "plugin". One of my favorites is called <strong>Underscore.js</strong>.
-  Let's go and grab it and load it into our page! First go to the Underscore
-  site, <a href="http://underscorejs.org/"></a><a href="http://underscorejs.org/">http://underscorejs.org/</a>,
-  click on the download link (I usually use development versions because
-  they are easier to read but both will give you the same basic functionality),
-  and then copy all the code onto your clipboard (you can use Select All
-  from the Edit menu to select everything).</p>
-<p>
-  <img src="images/underscore-source.png" alt="console">
-</p>
-<p>Then paste it into your console and hit enter. Now your browser has a
-  new variable in it: <code data-language="javascript" class="rainbow">_</code>.
-  Underscore gives you a ton of helpful functions to play with. We'll learn
-  more about how to use them later.</p>
-<p>
-  <img src="images/underscore-first.png" alt="console">
-</p>
+  <p>There is also a lot of JavaScript code available that is <strong>not built in</strong>.
+    JavaScript from third parties is usually referred to as a "library" or
+    "plugin". One of my favorites is called <strong>Underscore.js</strong>.
+    Let's go and grab it and load it into our page! First go to the Underscore
+    site, <a href="http://underscorejs.org/"></a><a href="http://underscorejs.org/">http://underscorejs.org/</a>,
+    click on the download link (I usually use development versions because
+    they are easier to read but both will give you the same basic functionality),
+    and then copy all the code onto your clipboard (you can use Select All
+    from the Edit menu to select everything).</p>
+  <p>
+    <img src="images/underscore-source.png" alt="console">
+  </p>
+  <p>Then paste it into your console and hit enter. Now your browser has a
+    new variable in it: <code data-language="javascript" class="rainbow">_</code>.
+    Underscore gives you a ton of helpful functions to play with. We'll learn
+    more about how to use them later.</p>
+  <p>
+    <img src="images/underscore-first.png" alt="console">
+  </p>
 
 <h3><a id="writing-functions" href="#writing-functions">#</a> Making new functions</h3>
 
-<p>You aren't limited to using other peoples functions -- you can also write
-  them yourself. It's pretty easy! Lets make a function called <code data-language="javascript"
-  class="rainbow">makeMoreExciting</code> that adds a bunch of exclamation
-  points to the end of a string.</p>
+  <p>You aren't limited to using other peoples functions -- you can also write
+    them yourself. It's pretty easy! Lets make a function called <code data-language="javascript"
+    class="rainbow">makeMoreExciting</code> that adds a bunch of exclamation
+    points to the end of a string.</p>
 <pre><code data-language="javascript" class="rainbow"><span class="storage function">function</span> <span class="entity name function">makeMoreExciting</span>(<span class="keyword">string</span>) {
-<span class="keyword">return</span> <span class="keyword">string</span> <span class="keyword operator">+</span> <span class="string">'!!!!'</span>
+  <span class="keyword">return</span> <span class="keyword">string</span> <span class="keyword operator">+</span> <span class="string">'!!!!'</span>
 }</code></pre>
 
-<p>In my head I read it out loud like this: "theres a function called 'make
-  more exciting' that takes in a string and returns a new copy of that string
-  that has a bunch of exclamation points at the end". Here is how we would
-  write this in the console manually if we weren't using a function:</p>
-<p>
-  <img src="images/custom-function-manually.png" alt="console">
-</p>
-<p>The expression <code data-language="javascript" class="rainbow"><span class="keyword">string</span> <span class="keyword operator">+</span> <span class="string">'!!!!'</span></code> returns
-  a new string and our variable called <code data-language="javascript" class="rainbow"><span class="keyword">string</span></code> stays
-  the same as before (since we never updated it to anything else with
-  <code
-  data-language="javascript" class="rainbow"><span class="keyword operator">=</span>
-    </code>).</p>
-<p>Lets use our function instead of doing it manually. First, paste the function
-  into the console and then <strong>call</strong> the function by <strong>passing in</strong> a
-  string:</p>
-<p>
-  <img src="images/custom-function-call.png" alt="console">
-</p>
-<p>You could also call the same function by passing in a variable that points
-  to a string (in the above example we just typed the string straight in
-  there as a value instead of saving it to a variable first):</p>
-<p>
-  <img src="images/custom-function-call-variable.png" alt="console">
-</p>
-<p>The line <code data-language="javascript" class="rainbow"><span class="function call">makeMoreExciting</span>(sentence)</code> is
-  equivalent to saying <code data-language="javascript" class="rainbow">sentence <span class="keyword operator">+</span> <span class="string">'!!!!'</span></code>.
-  What if we wanted to <strong>modify in-place</strong> (aka update) the value
-  of sentence? Simply save the return value of the function back into our
-  <code
-  data-language="javascript" class="rainbow">sentence</code>variable:</p>
+  <p>In my head I read it out loud like this: "theres a function called 'make
+    more exciting' that takes in a string and returns a new copy of that string
+    that has a bunch of exclamation points at the end". Here is how we would
+    write this in the console manually if we weren't using a function:</p>
+  <p>
+    <img src="images/custom-function-manually.png" alt="console">
+  </p>
+  <p>The expression <code data-language="javascript" class="rainbow"><span class="keyword">string</span> <span class="keyword operator">+</span> <span class="string">'!!!!'</span></code> returns
+    a new string and our variable called <code data-language="javascript" class="rainbow"><span class="keyword">string</span></code> stays
+    the same as before (since we never updated it to anything else with
+    <code
+    data-language="javascript" class="rainbow"><span class="keyword operator">=</span>
+      </code>).</p>
+  <p>Lets use our function instead of doing it manually. First, paste the function
+    into the console and then <strong>call</strong> the function by <strong>passing in</strong> a
+    string:</p>
+  <p>
+    <img src="images/custom-function-call.png" alt="console">
+  </p>
+  <p>You could also call the same function by passing in a variable that points
+    to a string (in the above example we just typed the string straight in
+    there as a value instead of saving it to a variable first):</p>
+  <p>
+    <img src="images/custom-function-call-variable.png" alt="console">
+  </p>
+  <p>The line <code data-language="javascript" class="rainbow"><span class="function call">makeMoreExciting</span>(sentence)</code> is
+    equivalent to saying <code data-language="javascript" class="rainbow">sentence <span class="keyword operator">+</span> <span class="string">'!!!!'</span></code>.
+    What if we wanted to <strong>modify in-place</strong> (aka update) the value
+    of sentence? Simply save the return value of the function back into our
+    <code
+    data-language="javascript" class="rainbow">sentence</code>variable:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> sentence <span class="keyword operator">=</span> <span class="string">"time for a nap"</span>
 sentence <span class="keyword operator">=</span> <span class="function call">makeMoreExciting</span>(sentence)</code></pre>
 
-<p>Now <code data-language="javascript" class="rainbow">sentence</code> will
-  have the exclamation marks in it! Note that you only have to use <code data-language="javascript"
-  class="rainbow"><span class="keyword">var</span></code> when you are <strong>initializing</strong> a
-  variable -- the first time you ever use it. After that you shouldn't use
-  <code
-  data-language="javascript" class="rainbow"><span class="keyword">var</span>
-    </code>unless you want to re-initialize (reset/clear/empty) the variable.</p>
-<p>What would happen if we took out the <code data-language="javascript" class="rainbow"><span class="keyword">return</span></code> statement
-  in our function?</p>
-<p>
-  <img src="images/custom-function-no-return.png" alt="console">
-</p>
-<p>Why is <code data-language="javascript" class="rainbow">sentence</code> empty?
-  Because functions return <code data-language="javascript" class="rainbow">undefined</code> by
-  default! You can choose to return a value by <code data-language="javascript"
-  class="rainbow"><span class="keyword">return</span></code>ing something.
-  Functions should take in a value and, if they change the value or create
-  a new value that is supposed to be used later, <code data-language="javascript"
-  class="rainbow"><span class="keyword">return</span></code> a value (fun
-  fact: a fancy term for this style is <em>functional programming</em>). Here
-  is another function that doesn't return anything but instead uses a different
-  method to show us the output:</p>
+  <p>Now <code data-language="javascript" class="rainbow">sentence</code> will
+    have the exclamation marks in it! Note that you only have to use <code data-language="javascript"
+    class="rainbow"><span class="keyword">var</span></code> when you are <strong>initializing</strong> a
+    variable -- the first time you ever use it. After that you shouldn't use
+    <code
+    data-language="javascript" class="rainbow"><span class="keyword">var</span>
+      </code>unless you want to re-initialize (reset/clear/empty) the variable.</p>
+  <p>What would happen if we took out the <code data-language="javascript" class="rainbow"><span class="keyword">return</span></code> statement
+    in our function?</p>
+  <p>
+    <img src="images/custom-function-no-return.png" alt="console">
+  </p>
+  <p>Why is <code data-language="javascript" class="rainbow">sentence</code> empty?
+    Because functions return <code data-language="javascript" class="rainbow">undefined</code> by
+    default! You can choose to return a value by <code data-language="javascript"
+    class="rainbow"><span class="keyword">return</span></code>ing something.
+    Functions should take in a value and, if they change the value or create
+    a new value that is supposed to be used later, <code data-language="javascript"
+    class="rainbow"><span class="keyword">return</span></code> a value (fun
+    fact: a fancy term for this style is <em>functional programming</em>). Here
+    is another function that doesn't return anything but instead uses a different
+    method to show us the output:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="storage function">function</span> <span class="entity name function">yellIt</span>(<span class="keyword">string</span>) {
-<span class="keyword">string</span> <span class="keyword operator">=</span> <span class="keyword">string</span>.<span class="function call">toUpperCase</span>()
-<span class="keyword">string</span> <span class="keyword operator">=</span> <span class="function call">makeMoreExciting</span>(<span class="keyword">string</span>)
-console.<span class="support method">log</span>(<span class="keyword">string</span>)
+  <span class="keyword">string</span> <span class="keyword operator">=</span> <span class="keyword">string</span>.<span class="function call">toUpperCase</span>()
+  <span class="keyword">string</span> <span class="keyword operator">=</span> <span class="function call">makeMoreExciting</span>(<span class="keyword">string</span>)
+  console.<span class="support method">log</span>(<span class="keyword">string</span>)
 }</code></pre>
 
-<p>This function, <code data-language="javascript" class="rainbow">yellIt</code>,
-  uses our previous function <code data-language="javascript" class="rainbow">makeMoreExciting</code> as
-  well as the built-in String method <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>.
-  Methods are just a name for a function when it belongs to something --
-  in this case <code data-language="javascript" class="rainbow">toUpperCase</code> is
-  a function that belongs to <code data-language="javascript" class="rainbow"><span class="keyword">String</span></code> so
-  we can refer to it as either a method <em>or</em> a function. <code data-language="javascript"
-  class="rainbow">makeMoreExciting</code> on the other hand doesn't belong
-  to anyone so it would be technically incorrect to refer to it as a method
-  (confusing, I know).</p>
-<p>The last line of the function is another built-in that simply takes in
-  any values that you give it and prints them out into the console.</p>
-<p>
-  <img src="images/custom-function-console-log.png" alt="console">
-</p>
-<p>So is there something wrong with the above <code data-language="javascript"
-  class="rainbow">yellIt</code> function? It depends! Here are the two major
-  types of functions:</p>
-<ul>
-  <li>functions that modify or create values and return them</li>
-  <li>functions take in values and perform some action that cannot be returned</li>
-</ul>
-<p><code data-language="javascript" class="rainbow">console.log</code> is
-  an example of the second type of function: it prints things out to your
-  console -- an action that you can see with your eyes but that cannot be
-  represented as a JavaScript value. My own rule of thumb is to try to keep
-  the two types of functions separate from each other, so here's how I would
-  rewrite the <code data-language="javascript" class="rainbow">yellIt</code> function:</p>
+  <p>This function, <code data-language="javascript" class="rainbow">yellIt</code>,
+    uses our previous function <code data-language="javascript" class="rainbow">makeMoreExciting</code> as
+    well as the built-in String method <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>.
+    Methods are just a name for a function when it belongs to something --
+    in this case <code data-language="javascript" class="rainbow">toUpperCase</code> is
+    a function that belongs to <code data-language="javascript" class="rainbow"><span class="keyword">String</span></code> so
+    we can refer to it as either a method <em>or</em> a function. <code data-language="javascript"
+    class="rainbow">makeMoreExciting</code> on the other hand doesn't belong
+    to anyone so it would be technically incorrect to refer to it as a method
+    (confusing, I know).</p>
+  <p>The last line of the function is another built-in that simply takes in
+    any values that you give it and prints them out into the console.</p>
+  <p>
+    <img src="images/custom-function-console-log.png" alt="console">
+  </p>
+  <p>So is there something wrong with the above <code data-language="javascript"
+    class="rainbow">yellIt</code> function? It depends! Here are the two major
+    types of functions:</p>
+  <ul>
+    <li>functions that modify or create values and return them</li>
+    <li>functions take in values and perform some action that cannot be returned</li>
+  </ul>
+  <p><code data-language="javascript" class="rainbow">console.log</code> is
+    an example of the second type of function: it prints things out to your
+    console -- an action that you can see with your eyes but that cannot be
+    represented as a JavaScript value. My own rule of thumb is to try to keep
+    the two types of functions separate from each other, so here's how I would
+    rewrite the <code data-language="javascript" class="rainbow">yellIt</code> function:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="storage function">function</span> <span class="entity name function">yellIt</span>(<span class="keyword">string</span>) {
-<span class="keyword">string</span> <span class="keyword operator">=</span> <span class="keyword">string</span>.<span class="function call">toUpperCase</span>()
-<span class="keyword">return</span> <span class="function call">makeMoreExciting</span>(<span class="keyword">string</span>)
+  <span class="keyword">string</span> <span class="keyword operator">=</span> <span class="keyword">string</span>.<span class="function call">toUpperCase</span>()
+  <span class="keyword">return</span> <span class="function call">makeMoreExciting</span>(<span class="keyword">string</span>)
 }
 
 console.<span class="support method">log</span>(<span class="function call">yellIt</span>(<span class="string">"i fear no human"</span>))</code></pre>
 
-<p>This way <code data-language="javascript" class="rainbow">yellIt</code> becomes
-  more <strong>generic</strong>, meaning it only does one or two simple little
-  things and doesn't know anything about printing itself to a console --
-  that part can always be programmed later, outside the function definition.</p>
+  <p>This way <code data-language="javascript" class="rainbow">yellIt</code> becomes
+    more <strong>generic</strong>, meaning it only does one or two simple little
+    things and doesn't know anything about printing itself to a console --
+    that part can always be programmed later, outside the function definition.</p>
 
 <h3><a id="loops" href="#loops">#</a> Loops</h3>
 
-<p>Now that we have some basic skills under our belt (<em>Author note: do cats even wear belts?</em>)
-  we can start being lazy. What?! Yes, that's right: programming is about
-  being lazy. Larry Wall, inventor of the Perl programming language, called
-  laziness the <a href="http://c2.com/cgi/wiki?LazinessImpatienceHubris">most important virtue</a> of
-  a good programmer. If computers didn't exist you would have to do all sorts
-  of tedious tasks by hand, but if you learn to program you can lay in the
-  sun all day while a computer somewhere runs your programs for you. It is
-  a glorious lifestyle filled with relaxation!</p>
-<p>Loops are one of the most important ways to harness the power of a computer.
-  Remember <code data-language="javascript" class="rainbow">Underscore.js</code> from
-  earlier? Make sure you have it loaded in the page (remember: you can just
-  hit the up arrow on your keyboard a few times and then hit <code data-language="javascript"
-  class="rainbow">Enter</code> to load it in again if you need to) and try
-  copy/pasting this into your console:</p>
+  <p>Now that we have some basic skills under our belt (<em>Author note: do cats even wear belts?</em>)
+    we can start being lazy. What?! Yes, that's right: programming is about
+    being lazy. Larry Wall, inventor of the Perl programming language, called
+    laziness the <a href="http://c2.com/cgi/wiki?LazinessImpatienceHubris">most important virtue</a> of
+    a good programmer. If computers didn't exist you would have to do all sorts
+    of tedious tasks by hand, but if you learn to program you can lay in the
+    sun all day while a computer somewhere runs your programs for you. It is
+    a glorious lifestyle filled with relaxation!</p>
+  <p>Loops are one of the most important ways to harness the power of a computer.
+    Remember <code data-language="javascript" class="rainbow">Underscore.js</code> from
+    earlier? Make sure you have it loaded in the page (remember: you can just
+    hit the up arrow on your keyboard a few times and then hit <code data-language="javascript"
+    class="rainbow">Enter</code> to load it in again if you need to) and try
+    copy/pasting this into your console:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="storage function">function</span> <span class="entity name function">logANumber</span>(someNumber) {
-console.<span class="support method">log</span>(someNumber)
+  console.<span class="support method">log</span>(someNumber)
 }
 _.<span class="function call">times</span>(<span class="constant numeric">10</span>, logANumber)</code></pre>
 
-<p>This code uses the <a href="http://underscorejs.org/#times">times</a> method
-  of Underscore which takes in 1 number and 1 function and then starts from
-  0 and for 10 steps counts up by 1, calling the function with the number
-  each step of the way.</p>
-<p>
-  <img src="images/times-loop.png" alt="console">
-</p>
-<p>If we were to manually write out what <code data-language="javascript"
-  class="rainbow">times</code> is doing in the above code it would look like
-  this:</p>
+  <p>This code uses the <a href="http://underscorejs.org/#times">times</a> method
+    of Underscore which takes in 1 number and 1 function and then starts from
+    0 and for 10 steps counts up by 1, calling the function with the number
+    each step of the way.</p>
+  <p>
+    <img src="images/times-loop.png" alt="console">
+  </p>
+  <p>If we were to manually write out what <code data-language="javascript"
+    class="rainbow">times</code> is doing in the above code it would look like
+    this:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="function call">logANumber</span>(0)
 <span class="function call">logANumber</span>(1)
 <span class="function call">logANumber</span>(2)
@@ -392,114 +394,194 @@ _.<span class="function call">times</span>(<span class="constant numeric">10</sp
 <span class="function call">logANumber</span>(8)
 <span class="function call">logANumber</span>(9)</code></pre>
 
-<p>But cats refuse to do unnecessary manual work like this so we must always
-  ask ourselves, <em>"am I doing this in the laziest way possible?"</em>.</p>
-<p>So why is this called looping? Think of it like this: If we were to write
-  out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would
-  look like this:</p>
+  <p>But cats refuse to do unnecessary manual work like this so we must always
+    ask ourselves, <em>"am I doing this in the laziest way possible?"</em>.</p>
+  <p>So why is this called looping? Think of it like this: If we were to write
+    out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would
+    look like this:</p>
 <pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> zeroThroughTen <span class="keyword operator">=</span> [<span class="constant numeric">0</span>, <span class="constant numeric">1</span>, <span class="constant numeric">2</span>, <span class="constant numeric">3</span>, <span class="constant numeric">4</span>, <span class="constant numeric">5</span>, <span class="constant numeric">6</span>, <span class="constant numeric">7</span>, <span class="constant numeric">8</span>, <span class="constant numeric">9</span>]</code></pre>
 
-<p>What <code data-language="javascript" class="rainbow">times</code> really
-  does is visit each number and repeat a task: in the example above the task
-  was to call the <code data-language="javascript" class="rainbow">logANumber</code> function
-  with the current number. Repeating tasks in this way is referred to as <em>looping over</em> the
-  Array.</p>
+  <p>What <code data-language="javascript" class="rainbow">times</code> really
+    does is visit each number and repeat a task: in the example above the task
+    was to call the <code data-language="javascript" class="rainbow">logANumber</code> function
+    with the current number. Repeating tasks in this way is referred to as <em>looping over</em> the
+    Array.</p>
 
 <h3><a id="arrays" href="#arrays">#</a> Arrays</h3>
 
-<p>I've mentioned these a few times but let's spend a minute learning about
-  them. Imagine you need to keep track of all your buddies. Well, an Array
-  will do just fine. Think of an Array like a sorted list that you can keep <em>tons</em> of
-  stuff in.</p>
-<p>This is how you make one:</p>
+  <p>I've mentioned these a few times but let's spend a minute learning about
+    them. Imagine you need to keep track of all your buddies. Well, an Array
+    will do just fine. Think of an Array like a sorted list that you can keep <em>tons</em> of
+    stuff in.</p>
+  <p>This is how you make one:</p>
 <pre><code data-language="javascript" class="rainbow">  <span class="keyword">var</span> myCatFriends <span class="keyword operator">=</span> [<span class="string">"tommy"</span>, <span class="string">"tabby"</span>, <span class="string">"ceiling"</span>]</code></pre>
 
-<p>Sweet! Now you have a list of your cat buddies.</p>
-<p>Elements (that is what you call a single item in an array) that are stored
-  within arrays start at 0 and count up from there. So <code data-language="javascript"
-  class="rainbow">myCatFriends[<span class="constant numeric">0</span>]</code> returns
-  <code
-  data-language="javascript" class="rainbow">tommy</code>and <code data-language="javascript" class="rainbow">myCatFriends[<span class="constant numeric">1</span>]</code> returns
+  <p>Sweet! Now you have a list of your cat buddies.</p>
+  <p>Elements (that is what you call a single item in an array) that are stored
+    within arrays start at 0 and count up from there. So <code data-language="javascript"
+    class="rainbow">myCatFriends[<span class="constant numeric">0</span>]</code> returns
     <code
-    data-language="javascript" class="rainbow">tabby</code>... etc etc.</p>
-<p>To get buddies out of your brand new Array you can just access an element
-  directly like so:</p>
+    data-language="javascript" class="rainbow">tommy</code>and <code data-language="javascript" class="rainbow">myCatFriends[<span class="constant numeric">1</span>]</code> returns
+      <code
+      data-language="javascript" class="rainbow">tabby</code>... etc etc.</p>
+  <p>To get buddies out of your brand new Array you can just access an element
+    directly like so:</p>
 <pre><code data-language="javascript" class="rainbow">  console.<span class="support method">log</span>(myCatFriends[<span class="constant numeric">0</span>])</code></pre>
 
-<p>
-  <img src="images/array-access.png" alt="console">
-</p>
-<p>If you made a brand new cat friend at the hippest cat club the other night
-  and you want to add them to your list it is super simple: <code data-language="javascript"
-  class="rainbow">myCatFriends.<span class="support method">push</span>(<span class="string">"super hip cat"</span>)</code>.</p>
-<p>To check that the new cat made it into your array you can use <code data-language="javascript"
-  class="rainbow">.<span class="support property">length</span></code>:</p>
-<p>
-  <img src="images/array-push-length.png" alt="console">
-</p>
-<p>Notice how <code data-language="javascript" class="rainbow">push</code> returned
-  the length? Handy! Also take note that arrays will always <strong>preserve ordering</strong> which
-  means they will remember the order in which you added or defined things.
-  Not everything in JavaScript preserves ordering so remember this special
-  property of Arrays!</p>
+  <p>
+    <img src="images/array-access.png" alt="console">
+  </p>
+  <p>If you made a brand new cat friend at the hippest cat club the other night
+    and you want to add them to your list it is super simple: <code data-language="javascript"
+    class="rainbow">myCatFriends.<span class="support method">push</span>(<span class="string">"super hip cat"</span>)</code>.</p>
+  <p>To check that the new cat made it into your array you can use <code data-language="javascript"
+    class="rainbow">.<span class="support property">length</span></code>:</p>
+  <p>
+    <img src="images/array-push-length.png" alt="console">
+  </p>
+  <p>Notice how <code data-language="javascript" class="rainbow">push</code> returned
+    the length? Handy! Also take note that arrays will always <strong>preserve ordering</strong> which
+    means they will remember the order in which you added or defined things.
+    Not everything in JavaScript preserves ordering so remember this special
+    property of Arrays!</p>
+
+<h3><a id="objects" href="#objects">#</a> Objects</h3>
+
+  <p>Arrays are good for lists, but for other tasks they can be hard to work
+    with. Consider our array of cat friends. What if you also wanted to store
+    more than just names?</p>
+<pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> myCatFriends <span class="keyword operator">=</span> [<span class="string">"tommy"</span>, <span class="string">"tabby"</span>, <span class="string">"ceiling"</span>]
+<span class="keyword">var</span> lastNames <span class="keyword operator">=</span> [<span class="string">"the cat"</span>, <span class="string">"cat"</span>, <span class="string">"cat"</span>]
+<span class="keyword">var</span> addresses <span class="keyword operator">=</span> [<span class="string">"The Alley"</span>, <span class="string">"Grandmas House"</span>, <span class="string">"Attic"</span>]</code></pre>
+
+  <p>Sometimes it is nice to have all of the addresses or names in one variable.
+    But sometimes you have a cat in mind, lets say tommy, and you just want
+    to look up that cats address. With arrays it takes a lot of work because
+    you can't just say 'hey array, give me tommys address' because 'tommy'
+    is in one array and his address is in a totally different array.</p>
+  <p>
+    <img src="images/array-lookup.png" alt="console">
+  </p>
+  <p>This can be brittle because if our arrays change and we add a new cat
+    to the beginning we would have to also update our <code data-language="javascript"
+    class="rainbow">tommysPosition</code> variable to point to the new location
+    of tommys information in the arrays! Here is a easier to maintain way to
+    store information like this using objects:</p>
+<pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> firstCat <span class="keyword operator">=</span> { name: <span class="string">"tommy"</span>, lastName: <span class="string">"the cat"</span>, address: <span class="string">"The Alley"</span> }
+<span class="keyword">var</span> secondCat <span class="keyword operator">=</span> { name: <span class="string">"tabby"</span>, lastName: <span class="string">"cat"</span>, address: <span class="string">"Grandmas House"</span> }
+<span class="keyword">var</span> thirdCat <span class="keyword operator">=</span> { name: <span class="string">"ceiling"</span>, lastName: <span class="string">"cat"</span>, address: <span class="string">"Attic"</span> }</code></pre>
+
+  <p>Why would we do it this way? Because now we have a variable for each cat
+    that we can use to get that cats values in a more convenient and readable
+    way.</p>
+  <p>
+    <img src="images/object-lookup.png" alt="console">
+  </p>
+  <p>You can think of Objects like keys on a keyring. Each one is for a specific
+    door and if you have nice labels on your keys you can open doors very fast.
+    In fact, the things on the left hand side of the <code data-language="javascript"
+    class="rainbow">:</code> are called <strong>keys</strong> the things on the
+    right side are <strong>properties</strong> (you can also just call them values).
+    You can remember this because you use your keys to get access to your properties,
+    just like owning a house!</p>
+<pre><code data-language="javascript" class="rainbow"><span class="comment">// an object with a single key 'name' and single value/property 'tommy'</span>
+{ name: <span class="string">'tommy'</span> }</code></pre>
+
+  <p>So why would you ever use arrays if you can just put your data in objects?
+    Because objects don't remember the order of the keys that you set. You
+    might enter in an object like this:</p>
+<pre><code data-language="javascript" class="rainbow">{ date: <span class="string">"10/20/2012"</span>, diary: <span class="string">"slept a bit today"</span>, name: <span class="string">"Charles"</span> }</code></pre>
+
+  <p>But the computer could give it back to you like this:</p>
+<pre><code data-language="javascript" class="rainbow">{ diary: <span class="string">"slept a bit today"</span>, name: <span class="string">"Charles"</span>, date: <span class="string">"10/20/2012"</span> }</code></pre>
+
+  <p>Or like this!</p>
+<pre><code data-language="javascript" class="rainbow">{ name: <span class="string">"Charles"</span>, diary: <span class="string">"slept a bit today"</span>, date: <span class="string">"10/20/2012"</span> }</code></pre>
+
+  <p>So you can't ever trust the order of keys in objects. If you wanna get
+    REALLY fancy you can make an array filled with objects, or an object filled
+    with arrays!</p>
+<pre><code data-language="javascript" class="rainbow"><span class="keyword">var</span> moodLog <span class="keyword operator">=</span> [
+  {
+    date: <span class="string">"10/20/2012"</span>,
+    mood: <span class="string">"catnipped"</span>
+  }, 
+  {
+    date: <span class="string">"10/21/2012"</span>,
+    mood: <span class="string">"nonplussed"</span>
+  },
+  {
+    date: <span class="string">"10/22/2012"</span>,
+    mood: <span class="string">"purring"</span>
+  }
+]
+
+<span class="comment">// ordered from least to most favorite</span>
+<span class="keyword">var</span> favorites <span class="keyword operator">=</span> {
+  treats: [<span class="string">"bird sighting"</span>, <span class="string">"belly rub"</span>, <span class="string">"catnip"</span>],
+  napSpots: [<span class="string">"couch"</span>, <span class="string">"planter box"</span>, <span class="string">"human face"</span>]
+}</code></pre>
+
+  <p>When you combine different things like this you are making <strong>data structures</strong>,
+    just like legos!</p>
 
 <h3>That is the end for now, but here's what I'm working on:</h3>
 
-<ul>
-  <li>More crazy looping!</li>
-  <li>Objects and JSON!</li>
-  <li>Grabbing stuff from other pages on the internet and displaying it</li>
-  <li>How to use Github to find and share code</li>
-  <li>Node.js and server side catgramming</li>
-</ul>
-<p>Got another topic you wanna see covered? Open an issue for it <a href="http://github.com/maxogden/javascript-for-cats">on github</a>.</p>
-<p>I'd recommend coming back again tomorrow and going through the entire
-  thing again from the beginning! It might take a few times through before
-  you get everything (programming is hard). Just try to avoid reading this
-  page in any rooms that contain shiny objects... they can be incredibly
-  distracting.</p>
+  <ul>
+    <li>More crazy looping!</li>
+    <li>JSON!</li>
+    <li>Grabbing stuff from other pages on the internet and displaying it</li>
+    <li>How to use Github to find and share code</li>
+    <li>Node.js and server side catgramming</li>
+  </ul>
+  <p>Got another topic you wanna see covered? Open an issue for it <a href="http://github.com/maxogden/javascript-for-cats">on github</a>.</p>
+  <p>I'd recommend coming back again tomorrow and going through the entire
+    thing again from the beginning! It might take a few times through before
+    you get everything (programming is hard). Just try to avoid reading this
+    page in any rooms that contain shiny objects... they can be incredibly
+    distracting.</p>
 
 <h3><a id="recommended-reading" href="#recommended-reading">#</a> Recommended reading</h3>
 
-<p>JavaScript For Cats skips over lots of details that aren't important for
-  getting started (cats are not known for their attention spans), but if
-  you feel like you need to dive in deeper then check these out:</p>
-<ul>
-  <li><a href="http://eloquentjavascript.net/">Eloquent Javascript</a> is a free
-    book that teaches you JavaScript! It's pretty good! Especially the chapter
-    on <a href="http://eloquentjavascript.net/chapter2.html">values, variables, and control flow</a>
-  </li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide">Mozilla's JavaScript Guide</a> also
-    has a pretty sweet intro chapter called <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals">values, variables and literals</a>
-  </li>
-  <li><a href="http://nodeguide.com/style.html">Felix's Node.js Style Guide</a> was
-    written about programming JavaScript on the server-side using Node.js but
-    there are lots of tips in here that are useful for anyone programming with
-    JavaScript.</li>
-</ul>
-<!-- function isItPastDinner() { if (new Date().getHours()) } -->
-<p><em>JSForCats.com is a labor of love and work in progress by <a href="http://twitter.com/maxogden">@maxogden</a>. If you would like to contribute and make this tutorial better there is a Github repo <a href="http://github.com/maxogden/javascript-for-cats">right over here</a>. Bonus: <a href="javascript-for-cats.pdf">Here is a PDF version</a> of JSForCats.</em>
+  <p>JavaScript For Cats skips over lots of details that aren't important for
+    getting started (cats are not known for their attention spans), but if
+    you feel like you need to dive in deeper then check these out:</p>
+  <ul>
+    <li><a href="http://eloquentjavascript.net/">Eloquent Javascript</a> is a free
+      book that teaches you JavaScript! It's pretty good! Especially the chapter
+      on <a href="http://eloquentjavascript.net/chapter2.html">values, variables, and control flow</a>
+    </li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide">Mozilla's JavaScript Guide</a> also
+      has a pretty sweet intro chapter called <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals">values, variables and literals</a>
+    </li>
+    <li><a href="http://nodeguide.com/style.html">Felix's Node.js Style Guide</a> was
+      written about programming JavaScript on the server-side using Node.js but
+      there are lots of tips in here that are useful for anyone programming with
+      JavaScript.</li>
+  </ul>
+  <!-- function isItPastDinner() { if (new Date().getHours()) } -->
+  <p><em>JSForCats.com is a labor of love and work in progress by <a href="http://twitter.com/maxogden">@maxogden</a>. If you would like to contribute and make this tutorial better there is a Github repo <a href="http://github.com/maxogden/javascript-for-cats">right over here</a>. Bonus: <a href="javascript-for-cats.pdf">Here is a PDF version</a> of JSForCats.</em>
 
-</p>
-<center>
-  <img src="images/awesome.jpg" alt="console">
-</center>
-<p></p>
-<hr>
-<p></p>
+  </p>
+  <center>
+    <img src="images/awesome.jpg" alt="console">
+  </center>
+  <p></p>
+  <hr>
+  <p></p>
 
 <h3><a id="satisfied-customers" href="#satisfied-customers">#</a> Satisfied customers</h3>
 
-<p>Here are some of our early students (who went on to found the successful
-  company <a href="http://realtimecats.com">RealtimeCats®</a> which offers
-  "Software as a Service" integrated cloud solutions for high resolution
-  feline imagery in faster than real time)</p>
-<center>
-  <img src="images/customers1.png" alt="satisfied customer">
-</center>
-<center>
-  <img src="images/customers2.png" alt="satisfied customer">
-</center>
+  <p>Here are some of our early students (who went on to found the successful
+    company <a href="http://realtimecats.com">RealtimeCatsÔøΩ</a> which offers
+    "Software as a Service" integrated cloud solutions for high resolution
+    feline imagery in faster than real time)</p>
+  <center>
+    <img src="images/customers1.png" alt="satisfied customer">
+  </center>
+  <center>
+    <img src="images/customers2.png" alt="satisfied customer">
+  </center>
 </div>
 </div>
 </div>
