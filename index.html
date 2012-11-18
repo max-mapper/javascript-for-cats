@@ -39,7 +39,7 @@
     can take advantage of that to make web pages do crazy things!</p>
   <p>JavaScript started as a programming language to make internet pages more
     interactive. Nowadays JavaScript runs in more places than just in web browsers
-    -- it runs on web servers, phones and <a href="http://jsfiddle.net/rwaldron/WZkn5/show/light/">even robots</a>!
+    &mdash; it runs on web servers, phones and <a href="http://jsfiddle.net/rwaldron/WZkn5/show/light/">even robots</a>!
     This page will teach you some JavaScript basics so that you can get up
     and running in no time*!</p>
   <p>* <em>actual time: more than none. probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun</em>
@@ -76,7 +76,7 @@
 <h2>Don't be a scaredy cat</h2>
 
   <p><span class="right"><img src="images/yarnify.png" alt="cat"></span>You
-    will always land on your feet -- even when programming! Unlike <a href="images/dealwithit.gif">pawing over a glass of water</a> on
+    will always land on your feet &mdash; even when programming! Unlike <a href="images/dealwithit.gif">pawing over a glass of water</a> on
     your laptop, <em>nothing</em> in these tutorials will damage your computer
     in any way, even if you mistype a command or click the wrong button. Like
     cats, computer programmers make mistakes all time: misspelling things,
@@ -85,8 +85,8 @@
     than trying to make it work the very first time. The best way to learn
     is by making mistakes!</p>
   <p>So don't be a scaredy cat! The absolute worst thing that will happen is
-    that you might have the refresh this page in your web browser if you get
-    stuck. Don't worry though, this will happen very rarely -- and we're talkin'
+    that you might have to refresh this page in your web browser if you get
+    stuck. Don't worry though, this will happen very rarely &mdash; and we're talkin'
     13-toed cat rare.</p>
 
 <h2><a id="basics" href="#basics">#</a> The basics</h2>
@@ -155,7 +155,7 @@
       a value, <code data-language="javascript" class="rainbow">"hello"</code> is
       a value, <code data-language="javascript" class="rainbow"><span class="keyword">function</span>() {}</code> is
       a value, the list goes on! There are a handful of different <strong>types</strong> of
-      values in JavaScript but we don't need to go over them all right away --
+      values in JavaScript but we don't need to go over them all right away &mdash;
       you will learn them naturally the more you code!</p>
   <p>To store values we use things called <strong>variables</strong>. The word
     'variable' means 'can change' and is used because variables can store many
@@ -178,7 +178,7 @@
     they go away when you switch to a different page. If I were to hit the
     Refresh button in Chrome, for example, my <code data-language="javascript"
     class="rainbow">dogSentence</code> variable would get wiped and it would
-    be like it never existed. But don't worry about this too much for now --
+    be like it never existed. But don't worry about this too much for now &mdash;
     you can just hit the up or down arrows on your keyboard while in the console
     to go through everything you've entered in recently.</p>
 
@@ -193,7 +193,7 @@
     does exactly what we want! Functions take in any number of values (zero,
     one or many) and return either nothing (<code data-language="javascript"
     class="rainbow">undefined</code>) or exactly one value (functions can't
-    return two or more values at a time -- only a single value). The <code data-language="javascript"
+    return two or more values at a time &mdash; only a single value). The <code data-language="javascript"
     class="rainbow">replace</code> function is available to use on any strings
     and takes in two values: the characters to take out and the characters
     to swap in. It gets confusing to describe these things so here is a visual
@@ -242,7 +242,7 @@
 
 <h3><a id="writing-functions" href="#writing-functions">#</a> Making new functions</h3>
 
-  <p>You aren't limited to using other peoples functions -- you can also write
+  <p>You aren't limited to using other peoples functions &mdash; you can also write
     them yourself. It's pretty easy! Lets make a function called <code data-language="javascript"
     class="rainbow">makeMoreExciting</code> that adds a bunch of exclamation
     points to the end of a string.</p>
@@ -287,7 +287,7 @@ sentence <span class="keyword operator">=</span> <span class="function call">mak
   <p>Now <code data-language="javascript" class="rainbow">sentence</code> will
     have the exclamation marks in it! Note that you only have to use <code data-language="javascript"
     class="rainbow"><span class="keyword">var</span></code> when you are <strong>initializing</strong> a
-    variable -- the first time you ever use it. After that you shouldn't use
+    variable &mdash; the first time you ever use it. After that you shouldn't use
     <code
     data-language="javascript" class="rainbow"><span class="keyword">var</span>
       </code>unless you want to re-initialize (reset/clear/empty) the variable.</p>
@@ -315,7 +315,7 @@ sentence <span class="keyword operator">=</span> <span class="function call">mak
   <p>This function, <code data-language="javascript" class="rainbow">yellIt</code>,
     uses our previous function <code data-language="javascript" class="rainbow">makeMoreExciting</code> as
     well as the built-in String method <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/toUpperCase">toUpperCase</a>.
-    Methods are just a name for a function when it belongs to something --
+    Methods are just a name for a function when it belongs to something &mdash;
     in this case <code data-language="javascript" class="rainbow">toUpperCase</code> is
     a function that belongs to <code data-language="javascript" class="rainbow"><span class="keyword">String</span></code> so
     we can refer to it as either a method <em>or</em> a function. <code data-language="javascript"
@@ -336,7 +336,7 @@ sentence <span class="keyword operator">=</span> <span class="function call">mak
   </ul>
   <p><code data-language="javascript" class="rainbow">console.log</code> is
     an example of the second type of function: it prints things out to your
-    console -- an action that you can see with your eyes but that cannot be
+    console &mdash; an action that you can see with your eyes but that cannot be
     represented as a JavaScript value. My own rule of thumb is to try to keep
     the two types of functions separate from each other, so here's how I would
     rewrite the <code data-language="javascript" class="rainbow">yellIt</code> function:</p>
@@ -349,7 +349,7 @@ console.<span class="support method">log</span>(<span class="function call">yell
 
   <p>This way <code data-language="javascript" class="rainbow">yellIt</code> becomes
     more <strong>generic</strong>, meaning it only does one or two simple little
-    things and doesn't know anything about printing itself to a console --
+    things and doesn't know anything about printing itself to a console &mdash;
     that part can always be programmed later, outside the function definition.</p>
 
 <h3><a id="loops" href="#loops">#</a> Loops</h3>
