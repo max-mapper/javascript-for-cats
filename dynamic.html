@@ -93,7 +93,7 @@
                       
                       ### <a id="functions" href="#functions">#</a> Functions
                       
-                      Now that we have our sentence stored in a variable lets give that variable to something that will replace words! We call things that perform actions like this **functions** because, well, they serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
+                      Now that we have our sentence stored in a variable let's give that variable to something that will replace words! We call things that perform actions like this **functions** because, well, they serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
                       
                       JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of values (zero, one or many) and return either nothing (`undefined`) or exactly one value (functions can't return two or more values at a time &mdash; only a single value). The `replace` function is available to use on any strings and takes in two values: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
                       
@@ -117,7 +117,7 @@
                       
                       ### <a id="writing-functions" href="#writing-functions">#</a> Making new functions
                       
-                      You aren't limited to using other peoples functions &mdash; you can also write them yourself. It's pretty easy! Lets make a function called `makeMoreExciting` that adds a bunch of exclamation points to the end of a string.
+                      You aren't limited to using other peoples functions &mdash; you can also write them yourself. It's pretty easy! Let's make a function called `makeMoreExciting` that adds a bunch of exclamation points to the end of a string.
                       
                           function makeMoreExciting(string) {
                             return string + '!!!!'
@@ -129,7 +129,7 @@
                       
                       The expression `string + '!!!!'` returns a new string and our variable called `string` stays the same as before (since we never updated it to anything else with `=`).
                       
-                      Lets use our function instead of doing it manually. First, paste the function into the console and then **call** the function by **passing in** a string:
+                      Let's use our function instead of doing it manually. First, paste the function into the console and then **call** the function by **passing in** a string:
                       
                       ![console](images/custom-function-call.png)
                       
@@ -248,7 +248,7 @@
                           var lastNames = ["the cat", "cat", "cat"]
                           var addresses = ["The Alley", "Grandmas House", "Attic"]
                       
-                      Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, lets say tommy, and you just want to look up that cats address. With arrays it takes a lot of work because you can't just say 'hey array, give me tommys address' because 'tommy' is in one array and his address is in a totally different array.
+                      Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say tommy, and you just want to look up that cats address. With arrays it takes a lot of work because you can't just say 'hey array, give me tommys address' because 'tommy' is in one array and his address is in a totally different array.
                       
                       ![console](images/array-lookup.png)
                       
