@@ -13,7 +13,6 @@
   },
   "gh-pages-deploy": {
     "prep": [
-      "build",
       "render"
     ],
     "noprompt": "true"
