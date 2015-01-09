@@ -302,7 +302,6 @@ I'd recommend coming back again tomorrow and going through the entire thing agai
 
 <hr>
 ### <a id="satisfied-customers" href="#satisfied-customers">#</a> Satisfied customers
-Here are some of our early students (some went on to found the successful company <a href="http://realtimecats.com">RealtimeCats®</a> which offers "Software as a Service" integrated cloud solutions for high resolution feline imagery in faster than real time)
 <center>![satisfied customer](images/customers1.png)</center>
 <center>![satisfied customer](images/customers2.png)</center>
 <center>![satisfied customer](images/customers3.png)</center>
