@@ -38,7 +38,7 @@ First, right click anywhere on the screen and hit **Inspect Element**, then clic
 
 ![console](images/console.png)
 
-This is a console, otherwise known as a "command line" or "terminal". Basically its a way to type one thing at a time into a computer and immediately get the computers answer back. They are super useful as a learning tool (I still use the console nearly every day that I'm coding).
+This is a console, otherwise known as a "command line" or "terminal". Basically it's a way to type one thing at a time into a computer and immediately get the computers answer back. They are super useful as a learning tool (I still use the console nearly every day that I'm coding).
 
 The console does some pretty cool stuff. Here I have started to type something and the console is helping me out by giving me a list of all the possible things I could continue to type! Another thing you could do is type `1 + 1` into the console and then hit the `Enter` key and watch what happens.
 
