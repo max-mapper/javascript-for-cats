@@ -20,13 +20,14 @@ JavaScript started as a programming language to make internet pages more interac
 - [Loops](#loops)
 - [Arrays](#arrays)
 - [Objects](#objects)
+- [Callbacks](#callbacks)
 - [Recommended reading](#recommended-reading)
 
 If you don't want to read it all now <a href="javascript-for-cats.pdf">here is a PDF version</a> you can keep for later.
 
 ## Don't be a scaredy-cat
 
-<span class="right">![cat](images/yarnify.png)</span>You will always land on your feet &mdash; even when programming! Unlike [pawing over a glass of water](images/dealwithit.gif) on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
+<span class="right">![cat](images/yarnify.png)</span>You will always land on your feet &mdash; even when programming! Unlike [pawing over a glass of water](images/dealwithit.gif) on your laptop, _nothing_ in these tutorials will damage your computer in any way, even if you mistype a command or click the wrong button. Like cats, computer programmers make mistakes all time: misspelling things, forgetting quotes or brackets, and being forgetful of how basic functions (and yarn, lasers) work. Programmers care more about making it work _eventually_ rather than trying to make it work the very first time. The best way to learn is by making mistakes!
 
 So don't be a scaredy-cat! The absolute worst thing that will happen is that you might have to refresh this page in your web browser if you get stuck. Don't worry though, this will happen very rarely &mdash; and we're talkin' 13-toed cat rare.
 
@@ -195,11 +196,11 @@ What `times` really does is visit each number and repeat a task: in the example 
 
   This is how you make one:
 
-      var myCatFriends = ["tommy", "tabby", "ceiling"]
+      var myCatFriends = ["bill", "tabby", "ceiling"]
 
   Sweet! Now you have a list of your cat buddies.
 
-  Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `tommy` and `myCatFriends[1]` returns `tabby`... etc etc.
+  Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc etc.
   
   To get buddies out of your brand new Array you can just access an element directly like so: 
   
@@ -219,17 +220,17 @@ What `times` really does is visit each number and repeat a task: in the example 
 
 Arrays are good for lists, but for other tasks they can be hard to work with. Consider our array of cat friends. What if you also wanted to store more than just names?
 
-    var myCatFriends = ["tommy", "tabby", "ceiling"]
+    var myCatFriends = ["bill", "tabby", "ceiling"]
     var lastNames = ["the cat", "cat", "cat"]
     var addresses = ["The Alley", "Grandmas House", "Attic"]
 
-Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Tommy, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say 'hey array, give me Tommy's address' because 'Tommy' is in one array and his address is in a totally different array.
+Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say 'hey array, give me Bill's address' because 'Bill' is in one array and his address is in a totally different array.
 
 ![console](images/array-lookup.png)
 
-This can be brittle because if our arrays change and we add a new cat to the beginning we would have to also update our `tommysPosition` variable to point to the new location of Tommy's information in the arrays! Here is a easier to maintain way to store information like this using objects:
+This can be brittle because if our arrays change and we add a new cat to the beginning we would have to also update our `billsPosition` variable to point to the new location of Bill's information in the arrays! Here is a easier to maintain way to store information like this using objects:
 
-    var firstCat = { name: "tommy", lastName: "the cat", address: "The Alley" }
+    var firstCat = { name: "bill", lastName: "the cat", address: "The Alley" }
     var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
     var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
   
@@ -239,8 +240,8 @@ Why would we do it this way? Because now we have a variable for each cat that we
 
 You can think of Objects like keys on a keyring. Each one is for a specific door and if you have nice labels on your keys you can open doors very fast. In fact, the things on the left hand side of the `:` are called **keys** (are also known as **properties**) and the things on the right hand side are **values**.
 
-    // an object with a single key 'name' and single value 'tommy'
-    { name: 'tommy' }
+    // an object with a single key 'name' and single value 'bill'
+    { name: 'bill' }
 
 So why would you ever use arrays if you can just put your data in objects? Because objects don't remember the order of the keys that you set. You might enter in an object like this:
 
@@ -279,23 +280,60 @@ So you can't ever trust the order of keys in objects. If you wanna get REALLY fa
     
 When you combine different things like this you are making **data structures**, just like legos!
 
-### That is the end for now, but here's what I'm working on:
+### <a id="callbacks" href="#callbacks">#</a> Callbacks
+
+Callbacks aren't really a feature of JavaScript like `Object` or `Array`, but instead just a way to use `Function`s in a certain way. To understand why callbacks are useful you first have to learn about asynchronous (often shortened to async) programming. Asynchronous code by definition is code written in a way that is not synchronous. Synchronous code is easy to understand and write. Here is an example to illustrate:
+
+```js
+var photo = download('http://lolcats.com/.png')
+sendToPrinter(photo)
+```
+
+This synchronous [pseudo-code](http://en.wikipedia.org/wiki/Pseudocode) downloads a photo and then prints it out on a printer. Pretty straightforward!
+
+This code is synchronous because in order for photo to get printed out the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other javascript from being executed until it finished, and then when the download completes it would un-block the javascript execution and line 2 would execute.
+
+Synchronous code is fine for things that happen fast, but it's horrible for things that require saving, loading, downloading or uploading. What if the `lolcats.com` servers are slow, or the internet connection you are using is slow, or the computer you are running the code on has too many youtube cat video tabs open and is running slowly? It means that it could potentially take minutes of waiting before line 2 gets around to running. Meanwhile, because all javascript on the page is being blocked from being run while the download is happening, the webpage would totally freeze up and become unresponsive until the download is done.
+
+Blocking execution should be avoided at all costs, especially when doing so makes your program freeze up or become unresponsive. Let's assume the photo above takes one second to download. To illustrate how long one second is to a modern computer, here is a program that tests to see how many tasks javascript can process in one second.
+
+```js
+function measureLoopSpeed() {
+  var count = 0
+  function addOne() { count = count + 1 }
+
+  // Date.now() returns a big number representing the number of
+  // milliseconds that have elapsed since Jan 01 1970
+  var now = Date.now()
+
+  // Loop until Date.now() is 1000 milliseconds (1 second) or more into
+  // the future from when we started looping. On each loop, call addOne
+  while (Date.now() - now < 1000) addOne()
   
-  - More crazy looping!
-  - JSON!
-  - Grabbing stuff from other pages on the internet and displaying it
-  - How to use Github to find and share code
-  - Node.js and server side catgramming
-  
-Got another topic you wanna see covered? Open an issue for it [on github](http://github.com/maxogden/javascript-for-cats).
+  // Finally it has been >= 1000ms, so let's print out our total count
+  console.log(count)
+}
+
+measureLoopSpeed()
+```
+
+Copy-paste the above code into your JavaScript console and after one second it should print out a number. On my computer I got `8527360`, approximately **8.5 million**. In one second JavaScript can call the `addOne` function 8.5 million times! So if you have synchronous code for downloading a photo, and the photo download takes one second, it means you are potentially preventing 8.5 million operations from happening while JavaScript execution is blocked.
+
+**work in progress**
+
+## The end!
+
+This is just the beginning of your relationship with JavaScript! You can't learn it all at once, but you should find what works for you and try to learn all of the concepts here.
 
 I'd recommend coming back again tomorrow and going through the entire thing again from the beginning! It might take a few times through before you get everything (programming is hard). Just try to avoid reading this page in any rooms that contain shiny objects . . . they can be incredibly distracting.
+
+Got another topic you wanna see covered? Open an issue for it [on github](http://github.com/maxogden/javascript-for-cats).
 
 ### <a id="recommended-reading" href="#recommended-reading">#</a> Recommended reading
 
   JavaScript For Cats skips over lots of details that aren't important for getting started (cats are not known for their attention spans), but if you feel like you need to dive in deeper then check these out:
   
-  - [NodeSchool.io](http://nodeschool.io/) is a community driven, open source educational software that teaches various node.js and JavaScript skills in an interactive, self-guided format. I helped make NodeSchool! Sadly it features less cats than this page. 
+  - [NodeSchool.io](http://nodeschool.io/) is a community driven, open source educational software that teaches various web development skills in an interactive, self-guided format. I helped make NodeSchool! Sadly it features less cats than this page. 
   - [Eloquent Javascript](http://eloquentjavascript.net/) is a free book that teaches you JavaScript! It's pretty good! Especially the chapter on [values, variables, and control flow](http://eloquentjavascript.net/chapter2.html)
   - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide) also has a pretty sweet intro chapter called [values, variables and literals](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals)
   - [Felix's Node.js Style Guide](http://nodeguide.com/style.html) was written about programming JavaScript on the server-side using Node.js but there are lots of tips in here that are useful for anyone programming with JavaScript.
