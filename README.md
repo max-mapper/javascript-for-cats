@@ -340,6 +340,7 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
 
 <hr>
 ### <a id="satisfied-customers" href="#satisfied-customers">#</a> Satisfied customers
+<center>![satisfied customer](images/customers5.jpg)</center>
 <center>![satisfied customer](images/customers1.png)</center>
 <center>![satisfied customer](images/customers2.png)</center>
 <center>![satisfied customer](images/customers3.png)</center>
