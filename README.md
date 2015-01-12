@@ -190,7 +190,7 @@ So why is this called looping? Think of it like this: If we were to write out a 
 
 What `times` really does is visit each number and repeat a task: in the example above the task was to call the `logANumber` function with the current number. Repeating tasks in this way is referred to as *looping over* the Array.
 
-  ### <a id="arrays" href="#arrays">#</a> Arrays
+### <a id="arrays" href="#arrays">#</a> Arrays
 
   I've mentioned these a few times but let's spend a minute learning about them. Imagine you need to keep track of all your buddies. Well, an Array will do just fine. Think of an Array like a sorted list that you can keep *tons* of stuff in.
 
