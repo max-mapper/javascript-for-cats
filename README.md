@@ -289,7 +289,7 @@ var photo = download('http://foo-chan.com/images/sp.jpg')
 uploadPhotoTweet(photo, '@maxogden')
 ```
 
-This synchronous [pseudo-code](http://en.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
+This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
 
 (*Author's note: I @maxogden do happily accept random cat photo tweets*)
 
