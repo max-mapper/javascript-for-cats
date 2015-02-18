@@ -69,7 +69,7 @@ If you simply type a variable name into the console it will print out the value 
 
 ### <a id="functions" href="#functions">#</a> Functions
 
-Now that we have our sentence stored in a variable let's give that variable to something that will replace words! We call things that perform actions like this **functions** because, well, they serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
+Now that we have our sentence stored in a variable, let's change a word stored in it!  We can do this by performing a *function*.  *Functions* are a type of value that, well, serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
 
 JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of values (zero, one or many) and return either nothing (`undefined`) or exactly one value (functions can't return two or more values at a time &mdash; only a single value). The `replace` function is available to use on any strings and takes in two values: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
 
