@@ -11,8 +11,8 @@ html,body {
 
 body,
 textarea,
-input { 
-  font: 13px/20px 'OpenSans', sans-serif; 
+input {
+  font: 13px/20px 'OpenSans', sans-serif;
 }
 
 a {
@@ -43,55 +43,55 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.5em;
 }
 
-h1 { 
-  font-size: 24px; 
+h1 {
+  font-size: 24px;
 }
 
-h1 small { 
-  font-size: 13px; 
-  font-weight: 400; 
+h1 small {
+  font-size: 13px;
+  font-weight: 400;
 }
 
-h2 { 
+h2 {
   font-weight: 400;
   font-size: 16px;
   padding: 5px 0 5px 30px;
 }
 
-h2 small { 
-  font-size: 16px; 
-  font-weight: 400; 
+h2 small {
+  font-size: 16px;
+  font-weight: 400;
 }
 
-h3 { 
+h3 {
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 10px;
   }
 
-h3 small { 
-  font-size: 14px; 
-  font-weight: 400; 
+h3 small {
+  font-size: 14px;
+  font-weight: 400;
 }
 
-h4 { 
-  font-size: 14px; 
+h4 {
+  font-size: 14px;
 }
 
-h5 { 
-  font-size: 13px; 
+h5 {
+  font-size: 13px;
 }
 
-h6 { 
-  font-size: 11px; 
-  font-weight: 400; 
+h6 {
+  font-size: 11px;
+  font-weight: 400;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5em;
-	margin-bottom: 0; 
+	margin-bottom: 0;
 	margin-top: 10px;
 }
 
@@ -107,10 +107,10 @@ p {
   Globals
 ---------------------------------------------*/
 
-h1 img { 
-  position: relative; 
-  top: 15px; 
-  left: 10px; 
+h1 img {
+  position: relative;
+  top: 15px;
+  left: 10px;
 }
 
 /* Top Branding/Navigation */
@@ -170,7 +170,7 @@ body.post #header {
 }
 
 #header .navigation a:hover {
-  background-color: #c9d1d6; 
+  background-color: #c9d1d6;
 }
 
 #header .user-status {
@@ -198,7 +198,7 @@ body.post #header {
   background-position: -441px -25px;
   background-repeat: no-repeat;
 }
- 
+
 #main {
   overflow:auto;
   padding-bottom: 60px; /* must be same height as the footer */
@@ -225,11 +225,11 @@ body.post #header {
   Footer - a sticky one
 ---------------------------------------------*/
 
-/* must declare 0 margins on everything, also for main layout components use padding, not 
-vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+/* must declare 0 margins on everything, also for main layout components use padding, not
+vertical margins (top and bottom) to add spacing, else those margins get added to total height
 and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
 
-#container { 
+#container {
   min-height: 100%;
   min-width: 960px;
 }
@@ -251,7 +251,7 @@ and your footer gets pushed down a bit more, creating vertical scroll bars in th
   font-size: 15px;
 }
 
-#footer a, #footer .brand { 
+#footer a, #footer .brand {
   font-size: 12px;
   font-weight: bold;
   font-weight: 700;
@@ -262,22 +262,22 @@ and your footer gets pushed down a bit more, creating vertical scroll bars in th
   padding-left: 20px;
 }
 
-a.about, a.help { 
-  background-image: url('images/sprite.png'); 
+a.about, a.help {
+  background-image: url('images/sprite.png');
 }
-  
-a.about { 
-  background-position: 0 -959px; 
+
+a.about {
+  background-position: 0 -959px;
 }
-  
-a.help { 
-  background-position: 0 -1049px; 
+
+a.help {
+  background-position: 0 -1049px;
 }
 
 #footer .footer-content p {
   margin: 16px 0;
 }
-  
+
 /*Opera Fix*/
   body:before {/* thanks to Maleika (Kohoutec)*/
   content:"";
@@ -352,7 +352,7 @@ a.help {
 }
 
 #start .splash p {
-  margin-bottom: 20px;	
+  margin-bottom: 20px;
 }
 
 .authorize {
@@ -364,10 +364,10 @@ a.help {
 }
 
 .authorize p {
-  margin-top: 0; 
+  margin-top: 0;
   margin-bottom: 20px;
 }
-  
+
 .authorize a.button {
   display: block;
   background: #516066;
@@ -375,15 +375,15 @@ a.help {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  font-family:'OpenSans', sans-serif; 
+  font-family:'OpenSans', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 700;
   color: #fff;
 }
-  
-.authorize a.button:hover { 
-  background: #3d4548; 
+
+.authorize a.button:hover {
+  background: #3d4548;
 }
 
 /* ------------------------------------------
@@ -425,7 +425,6 @@ a.help {
 }
 
 #start .profile-header, #start .profile-details {
-
   font-size: 14px;
 }
 
@@ -479,7 +478,7 @@ a.help {
   font-size: 16px;
   padding: 10px;
   margin-bottom: 20px;
-  background: #E0E7EB; 
+  background: #E0E7EB;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -516,7 +515,7 @@ a.help {
   margin: 0 20px 20px 0;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
   background:url('images/sprite.png') -450px -640px no-repeat;
-  background-color: #E0E7EB; 
+  background-color: #E0E7EB;
   -moz-border-radius: 3px 3px 0px 3px;
   -webkit-border-radius: 3px 3px 0px 3px;
   border-radius: 3px 3px 0px 3px;
@@ -585,7 +584,7 @@ a.help {
   word-wrap: break-word;
 }
 
-  
+
 .repos a .branches .branch {
   padding: 2px 5px;
   text-align: center;
@@ -662,13 +661,13 @@ ul.site li a:hover {
   display:inline;
   padding:0 5px;
 }
-  
-#user a { 
-  color:#222; 
+
+#user a {
+  color:#222;
 }
 
-#user .logout a { 
-  color:#999; 
+#user .logout a {
+  color:#999;
 }
 
 /* Form hint */
@@ -698,7 +697,7 @@ ul.site li a:hover {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
 }
-  
+
 .step form {
   width: 240px;
   margin: 0 auto;
@@ -734,13 +733,13 @@ ul.site li a:hover {
   height: 180px;
   margin: 0 20px 20px 0;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0),0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 3px 40px 3px 3px; 
+  border-radius: 3px 40px 3px 3px;
   background-image:url('images/sprite.png') -450px -400px no-repeat;
   background-color: #F2F6F8;
 }
 
-.post-listing a.link:hover { 
-  background-color: #fff; 
+.post-listing a.link:hover {
+  background-color: #fff;
 }
 
 .post-listing a.link:before {
@@ -750,7 +749,7 @@ ul.site li a:hover {
   vertical-align: middle;
   margin-right: -0.25em;
 }
-  
+
 .post-listing a.link .filename {
   display: inline-block;
   vertical-align: middle;
@@ -763,8 +762,8 @@ ul.site li a:hover {
   margin: 0 10px;
 }
 
-.post-listing a.link.loading { 
-  background-color: white; 
+.post-listing a.link.loading {
+  background-color: white;
 }
 
 .post-listing a.link.loading .filename {
@@ -772,9 +771,9 @@ ul.site li a:hover {
   overflow: hidden;
   position: absolute;
   margin: auto;
-  left: 0; 
-  right: 0; 
-  top: 0; 
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 0;
   background-image: url('images/ajax-loader.gif') no-repeat;
   height: 11px;
@@ -801,8 +800,8 @@ ul.site li a:hover {
   border-radius: 3px;
 }
 
-.post-listing a.link.folder:hover { 
-  background-color: #f0f5f7; 
+.post-listing a.link.folder:hover {
+  background-color: #f0f5f7;
 }
 
 .post-listing a.link.new .button {
@@ -825,7 +824,7 @@ ul.site li a:hover {
   font-weight: 700;
 }
 
-.post-listing a.link.new:hover .button { 
+.post-listing a.link.new:hover .button {
   background: #3d4548 url('images/sprite.png') -440px -90px no-repeat; }
 
 
@@ -911,25 +910,25 @@ ul.site li a:hover {
   margin-left: 1px;
   border-radius: 0;
 }
-  
-.document-menu-content .menu-item.cheatsheet { 
+
+.document-menu-content .menu-item.cheatsheet {
   background-position: -290px -486px;
   -moz-border-radius: 5px 0px 0px 5px;
   -webkit-border-radius: 5px 0px 0px 5px;
   border-radius: 5px 0px 0px 5px;
 }
 
-.document-menu-content .menu-item.preview { 
+.document-menu-content .menu-item.preview {
   background-position: -438px 15px;
   -moz-border-radius: 0px 5px 5px 0px;
   -webkit-border-radius: 0px 5px 5px 0px;
   border-radius: 0px 5px 5px 0px;
 }
-  
-.document-menu-content .menu-item.compose { 
+
+.document-menu-content .menu-item.compose {
   background-position: -288px -538px;
 }
-  
+
 .document-menu-content .menu-item.preview.active, .document-menu-content .menu-item.cheatsheet.active, .document-menu-content .menu-item.compose.active {
   background-color: rgba(0,0,0, 0.6);
 }
@@ -1051,9 +1050,9 @@ ul.site li a:hover {
   background: none;
 }
 
-.document-menu-content .state .button.save { 
-  background-color: rgba(0,0,0, 0.2); 
-  width: 180px; 
+.document-menu-content .state .button.save {
+  background-color: rgba(0,0,0, 0.2);
+  width: 180px;
   text-align: center;
   line-height: 40px;
   margin-left: 1px;
@@ -1063,9 +1062,9 @@ ul.site li a:hover {
   margin-left: 1px;
   padding: 0;
 }
-  
-.document-menu-content .state .button.save:hover { 
-  background-color: rgba(0,0,0, 0.4); 
+
+.document-menu-content .state .button.save:hover {
+  background-color: rgba(0,0,0, 0.4);
 }
 
 .document-menu-content .save-state {
@@ -1274,38 +1273,38 @@ ul.site li a:hover {
 }
 
 .post-content .title {
-  font-size: 18px; 
-  margin-bottom: 20px; 
+  font-size: 18px;
+  margin-bottom: 20px;
   font-weight: 700;
   border-bottom: 1px solid #d5e0e4;
   padding-bottom: 20px;
 }
 
-.post-content .bigTitle { 
+.post-content .bigTitle {
   font-size: 85px;
 }
 
-.post-content h1 { 
-  font-size: 36px; 
-  margin: 10px 0 20px 0; 
-  float: left; 
+.post-content h1 {
+  font-size: 36px;
+  margin: 10px 0 20px 0;
+  float: left;
 }
 
-.post-content h2 { 
-  font-size: 24px; 
-  margin: 10px 0 20px 0; 
-  font-weight: 700; 
-  padding: 0; 
-  clear: both; 
+.post-content h2 {
+  font-size: 24px;
+  margin: 10px 0 20px 0;
+  font-weight: 700;
+  padding: 0;
+  clear: both;
 }
 
-.post-content h3, .post-content h4, .post-content h5, .post-content h6 { 
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 {
   text-transform: none;
   font-size: 18px;
   font-weight: 700;
   margin: 10px 0 5px 0;
 }
-  
+
 .post-content blockquote {
 	padding-left: 19px;
   border-left: 1px solid #d5e0e4;
@@ -1344,7 +1343,7 @@ ul.site li a:hover {
 .post-content a:hover {
   color: #73955C;
 }
-  
+
 .post-content p {
   margin-bottom: 20px;
 }
@@ -1352,7 +1351,7 @@ ul.site li a:hover {
 .post-content p:last-child {
   margin-bottom: 20px;
 }
-  
+
 .post-content code {
   font-family: Menlo, monospace;
   padding: 4px;
@@ -1411,7 +1410,7 @@ ul.site li a:hover {
 }
 
 .help.post-content h2 { background: none;}
-  
+
 .help .articles {
   overflow: auto;
 }
@@ -1419,7 +1418,7 @@ ul.site li a:hover {
 .help .articles .article {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  border-radius: 4px
+  border-radius: 4px;
   border: #c3ccd0 1px solid;
   overflow: hidden;
   background-color: #F2F6F8;
@@ -1486,8 +1485,8 @@ ul.site li a:hover {
   font-weight: 700;
 }
 
-#notification a:hover { 
-  background-color: #3d4548; 
+#notification a:hover {
+  background-color: #3d4548;
 }
 
 ul.form li {
@@ -1585,11 +1584,11 @@ label.error {
   .content-preview-wrapper {
     padding-top: 0;
   }
-  
+
   #container {
     min-width: 100%;
   }
-    
+
   .post-content {
     padding: 20px 15px;
   }
