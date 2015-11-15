@@ -310,12 +310,12 @@ Callbacks aren't really a feature of JavaScript like `Object` or `Array`, but in
 
 ```js
 var photo = download('http://foo-chan.com/images/sp.jpg')
-uploadPhotoTweet(photo, '@maxogden')
+uploadPhotoTweet(photo, '@denormalize')
 ```
 
-This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
+This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@denormalize`. Pretty straightforward!
 
-(*Author's note: I @maxogden do happily accept random cat photo tweets*)
+(*Author's note: I @denormalize do happily accept random cat photo tweets*)
 
 This code is synchronous because in order for photo to get uploaded to the tweet, the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other JavaScript from being executed until it finished, and then when the download completes it would un-block the JavaScript execution and line 2 would execute.
 
@@ -417,5 +417,5 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
 <center>![satisfied customer](images/customers3.png)</center>
 <center>![satisfied customer](images/customers4.png)</center>
 
-*JSForCats.com is a labor of love and work in progress by [@maxogden](http://twitter.com/maxogden). If you would like to contribute and make this tutorial better there is a Github repo [right over here](http://github.com/maxogden/javascript-for-cats).*
+*JSForCats.com is a labor of love and work in progress by [@denormalize](http://twitter.com/denormalize). If you would like to contribute and make this tutorial better there is a Github repo [right over here](http://github.com/maxogden/javascript-for-cats).*
 <center>![console](images/awesome.jpg)</center>
