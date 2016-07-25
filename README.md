@@ -8,6 +8,8 @@ JavaScript started as a way to make web pages more interactive. Nowadays JavaScr
 
 \* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun*
 
+JavaScript for Cats is [CC0 Licensed](https://creativecommons.org/publicdomain/zero/1.0/)
+
 ## Table of contents
 
 - [The console](#basics)
