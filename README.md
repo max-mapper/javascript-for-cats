@@ -411,6 +411,7 @@ Got another topic you wanna see covered? Open an issue for it [on github](http:/
   - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/JavaScript/Guide) also has a pretty sweet intro chapter called [values, variables and literals](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Values,_variables,_and_literals)
   - [`standard` JS Style Guide](https://github.com/feross/standard) is a "zero configuration" linter for JS style that I use
   - [Let's Write Code by @shama](https://github.com/shama/letswritecode) a great series of YouTube coding tutorials made by a friend of mine
+  - [Kompulsa's JavaScript tutorial](https://www.kompulsa.com/javascript-tutorial/) is a guide with bite-sized code examples for beginners
 
 <hr>
 ### <a id="satisfied-customers" href="#satisfied-customers">#</a> Satisfied customers
