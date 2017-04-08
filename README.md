@@ -81,7 +81,7 @@ Notice how the value of `dogSentence` is the same even after we run `replace` on
 
 ### <a id="standard-library" href="#standard-library">#</a> The "standard library"
 
-You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots of **built in, standard libraries** that you can learn about at MDN (A site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots of **built in, standard libraries** that you can learn about at MDN (a site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
 
 ### <a id="third-party-javascript" href="#third-party-javascript">#</a> Third-party JavaScript
 
