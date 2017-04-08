@@ -210,7 +210,7 @@ var myCatFriends = ["bill", "tabby", "ceiling"]
 
 Sweet! Now you have a list of your cat buddies.
 
-Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc etc.
+Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc, etc.
 
 To get buddies out of your brand new Array you can just access an element directly like so: 
 
