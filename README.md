@@ -37,7 +37,7 @@ So don't be a scaredy-cat! The absolute worst thing that will happen is that you
 
 There is JavaScript running on this page right now.  Let's play around with it a little. For the sake of simplicity I'll assume you are using Google Chrome to read this page (if you aren't it's probably easier on both of us if you follow along with Chrome).
 
-First, right click anywhere on the screen and hit **Inspect Element**, then click on the **Console** tab. You should see a thingy that looks like this:
+First, right click anywhere on the screen and hit **Inspect**, then click on the **Console** tab. You should see a thingy that looks like this:
 
 ![console](images/console.gif)
 
