@@ -304,7 +304,7 @@ var favorites = {
 }
 ```
 
-When you combine different things like this you are making **data structures**, just like legos!
+When you combine different things like this you are making **data structures**, just like Legos!
 
 ### <a id="callbacks" href="#callbacks">#</a> Callbacks
 
