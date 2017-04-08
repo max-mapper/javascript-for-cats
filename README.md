@@ -250,7 +250,7 @@ var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
 var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
 ```
   
-Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way. 
+Why would we do it this way? Because now we have a variable for each cat that we can use to get that cat's values in a more convenient and readable way. 
 
 ![console](images/object-lookup.png)
 
