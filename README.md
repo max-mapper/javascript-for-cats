@@ -6,7 +6,7 @@ JavaScript is a programming language or, in other words, a means by which a comp
 
 JavaScript started as a way to make web pages more interactive. Nowadays JavaScript runs in more places than just web browsers &mdash; it runs on web servers, phones and even robots! This page will teach you some JavaScript basics so that you can get up and running in no time*.
 
-\* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun*
+\* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun.*
 
 JavaScript for Cats is [CC0 Licensed](https://creativecommons.org/publicdomain/zero/1.0/)
 
