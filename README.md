@@ -190,7 +190,7 @@ logANumber(9)
 
 But cats refuse to do unnecessary manual work like this so we must always ask ourselves, *"am I doing this in the laziest way possible?"*.
 
-So why is this called looping? Think of it like this: If we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
+So why is this called looping? Think of it like this: if we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
 
 ```js
 var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
