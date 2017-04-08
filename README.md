@@ -77,7 +77,7 @@ JavaScript has a function called `replace` that does exactly what we want! Funct
 
 ![console](images/console-replace.gif)
 
-Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because the `replace` function, (and most JavaScript functions for that matter) takes the value we give it and returns a **new value**, without modifying the value we passed in. Since we didn't store the result (there is no `=` on the left side of the replace function) it just printed out the return value in our console.
+Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because the `replace` function (and most JavaScript functions for that matter) takes the value we give it and returns a **new value**, without modifying the value we passed in. Since we didn't store the result (there is no `=` on the left side of the replace function) it just printed out the return value in our console.
 
 ### <a id="standard-library" href="#standard-library">#</a> The "standard library"
 
