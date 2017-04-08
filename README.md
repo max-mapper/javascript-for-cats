@@ -111,7 +111,7 @@ You could also call the same function by passing in a variable that points to a 
 
 ![console](images/custom-function-call-variable.gif)
 
-The line `makeMoreExciting(sentence)` is equivalent to saying `sentence + '!!!!'`. What if we wanted to **modify in-place** (aka update) the value of sentence? Simply save the return value of the function back into our `sentence` variable:
+The line `makeMoreExciting(sentence)` is equivalent to saying `sentence + '!!!!'`. What if we wanted to **modify in-place** (aka update) the value of `sentence`? Simply save the return value of the function back into our `sentence` variable:
 
     var sentence = "time for a nap"
     sentence = makeMoreExciting(sentence)
