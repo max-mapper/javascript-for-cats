@@ -238,7 +238,7 @@ var lastNames = ["the cat", "cat", "cat"]
 var addresses = ["The Alley", "Grandmas House", "Attic"]
 ```
 
-Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say 'hey array, give me Bill's address' because 'Bill' is in one array and his address is in a totally different array.
+Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say "hey array, give me Bill's address" because 'Bill' is in one array and his address is in a totally different array.
 
 ![console](images/array-lookup.png)
 
