@@ -6,7 +6,7 @@ JavaScript is a programming language or, in other words, a means by which a comp
 
 JavaScript started as a way to make web pages more interactive. Nowadays JavaScript runs in more places than just web browsers &mdash; it runs on web servers, phones and even robots! This page will teach you some JavaScript basics so that you can get up and running in no time*.
 
-\* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun*
+\* *Actual time: more than none. Probably an hour or two. Also since you are a cat you are less likely to run and more likely to lay around in the sun.*
 
 JavaScript for Cats is [CC0 Licensed](https://creativecommons.org/publicdomain/zero/1.0/)
 
@@ -37,11 +37,11 @@ So don't be a scaredy-cat! The absolute worst thing that will happen is that you
 
 There is JavaScript running on this page right now.  Let's play around with it a little. For the sake of simplicity I'll assume you are using Google Chrome to read this page (if you aren't it's probably easier on both of us if you follow along with Chrome).
 
-First, right click anywhere on the screen and hit **Inspect Element**, then click on the **Console** tab. You should see a thingy that looks like this:
+First, right click anywhere on the screen and hit **Inspect**, then click on the **Console** tab. You should see a thingy that looks like this:
 
 ![console](images/console.gif)
 
-This is a console, otherwise known as a "command line" or "terminal". Basically it's a way to type one thing at a time into a computer and immediately get the computers answer back. They are super useful as a learning tool (I still use the console nearly every day that I'm coding).
+This is a console, otherwise known as a "command line" or "terminal". Basically it's a way to type one thing at a time into a computer and immediately get the computer's answer back. They are super useful as a learning tool (I still use the console nearly every day that I'm coding).
 
 The console does some pretty cool stuff. Here I have started to type something and the console is helping me out by giving me a list of all the possible things I could continue to type! Another thing you could do is type `1 + 1` into the console and then hit the `Enter` key and watch what happens.
 
@@ -71,17 +71,17 @@ If you simply type a variable name into the console it will print out the value 
 
 ### <a id="functions" href="#functions">#</a> Functions
 
-Now that we have our sentence stored in a variable, let's change a word stored in it!  We can do this by performing a *function*.  *Functions* are a type of value that, well, serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
+Now that we have our sentence stored in a variable, let's change a word stored in it!  We can do this by performing a **function**.  *Functions* are a type of value that, well, serve a specific *function* (AKA purpose or action) for us. Calling them "actions" sounded weird I guess so they went with the word "function" instead.
 
 JavaScript has a function called `replace` that does exactly what we want! Functions take in any number of values in their parentheses (zero, one or many) and return either nothing (`undefined`) or the changed string. The `replace` function is available to use on any strings and takes in two values: the characters to take out and the characters to swap in. It gets confusing to describe these things so here is a visual example:
 
 ![console](images/console-replace.gif)
 
-Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because the `replace` function, (and most JavaScript functions for that matter) takes the value we give it and returns a **new value**, without modifying the value we passed in. Since we didn't store the result (there is no `=` on the left side of the replace function) it just printed out the return value in our console.
+Notice how the value of `dogSentence` is the same even after we run `replace` on it? This is because the `replace` function (and most JavaScript functions for that matter) takes the value we give it and returns a **new value**, without modifying the value we passed in. Since we didn't store the result (there is no `=` on the left side of the replace function) it just printed out the return value in our console.
 
 ### <a id="standard-library" href="#standard-library">#</a> The "standard library"
 
-You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots **built in, standard libraries** that you can learn about at MDN (A site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
+You might be wondering what other functions are available in JavaScript. The answer: A TON. There are lots of **built in, standard libraries** that you can learn about at MDN (a site run by Mozilla that has lotsa nifty information about web technologies). For example [here is the MDN page on JavaScript's Math object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math).
 
 ### <a id="third-party-javascript" href="#third-party-javascript">#</a> Third-party JavaScript
 
@@ -111,7 +111,7 @@ You could also call the same function by passing in a variable that points to a 
 
 ![console](images/custom-function-call-variable.gif)
 
-The line `makeMoreExciting(sentence)` is equivalent to saying `sentence + '!!!!'`. What if we wanted to **modify in-place** (aka update) the value of sentence? Simply save the return value of the function back into our `sentence` variable:
+The line `makeMoreExciting(sentence)` is equivalent to saying `sentence + '!!!!'`. What if we wanted to **modify in-place** (aka update) the value of `sentence`? Simply save the return value of the function back into our `sentence` variable:
 
     var sentence = "time for a nap"
     sentence = makeMoreExciting(sentence)
@@ -190,7 +190,7 @@ logANumber(9)
 
 But cats refuse to do unnecessary manual work like this so we must always ask ourselves, *"am I doing this in the laziest way possible?"*.
 
-So why is this called looping? Think of it like this: If we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
+So why is this called looping? Think of it like this: if we were to write out a list of 10 numbers (from 0 to 9) using a JavaScript Array it would look like this:
 
 ```js
 var zeroThroughTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -210,7 +210,7 @@ var myCatFriends = ["bill", "tabby", "ceiling"]
 
 Sweet! Now you have a list of your cat buddies.
 
-Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc etc.
+Elements (that is what you call a single item in an array) that are stored within arrays start at 0 and count up from there. So `myCatFriends[0]` returns `bill` and `myCatFriends[1]` returns `tabby`... etc, etc.
 
 To get buddies out of your brand new Array you can just access an element directly like so: 
 
@@ -238,7 +238,7 @@ var lastNames = ["the cat", "cat", "cat"]
 var addresses = ["The Alley", "Grandmas House", "Attic"]
 ```
 
-Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say 'hey array, give me Bill's address' because 'Bill' is in one array and his address is in a totally different array.
+Sometimes it is nice to have all of the addresses or names in one variable. But sometimes you have a cat in mind, let's say Bill, and you just want to look up that cat's address. With arrays it takes a lot of work because you can't just say "hey array, give me Bill's address" because 'Bill' is in one array and his address is in a totally different array.
 
 ![console](images/array-lookup.png)
 
@@ -250,7 +250,7 @@ var secondCat = { name: "tabby", lastName: "cat", address: "Grandmas House" }
 var thirdCat = { name: "ceiling", lastName: "cat", address: "Attic" }
 ```
   
-Why would we do it this way? Because now we have a variable for each cat that we can use to get that cats values in a more convenient and readable way. 
+Why would we do it this way? Because now we have a variable for each cat that we can use to get that cat's values in a more convenient and readable way. 
 
 ![console](images/object-lookup.png)
 
@@ -304,7 +304,7 @@ var favorites = {
 }
 ```
 
-When you combine different things like this you are making **data structures**, just like legos!
+When you combine different things like this you are making **data structures**, just like Legos!
 
 ### <a id="callbacks" href="#callbacks">#</a> Callbacks
 
@@ -317,11 +317,11 @@ uploadPhotoTweet(photo, '@maxogden')
 
 This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
 
-(*Author's note: I @maxogden do happily accept random cat photo tweets*)
+(*Author's note: I @maxogden do happily accept random cat photo tweets.*)
 
-This code is synchronous because in order for photo to get uploaded to the tweet, the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other JavaScript from being executed until it finished, and then when the download completes it would un-block the JavaScript execution and line 2 would execute.
+This code is synchronous because in order for `photo` to get uploaded to the tweet, the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other JavaScript from being executed until it finished, and then when the download completes it would un-block the JavaScript execution and line 2 would execute.
 
-Synchronous code is fine for things that happen fast, but it's horrible for things that require saving, loading, downloading or uploading. What if the server you're downloading the photo from is slow, or the internet connection you are using is slow, or the computer you are running the code on has too many youtube cat video tabs open and is running slowly? It means that it could potentially take minutes of waiting before line 2 gets around to running. Meanwhile, because all JavaScript on the page is being blocked from being run while the download is happening, the webpage would totally freeze up and become unresponsive until the download is done.
+Synchronous code is fine for things that happen fast, but it's horrible for things that require saving, loading, downloading or uploading. What if the server you're downloading the photo from is slow, or the internet connection you are using is slow, or the computer you are running the code on has too many YouTube cat video tabs open and is running slowly? It means that it could potentially take minutes of waiting before line 2 gets around to running. Meanwhile, because all JavaScript on the page is being blocked from being run while the download is happening, the webpage would totally freeze up and become unresponsive until the download is done.
 
 Blocking execution should be avoided at all costs, especially when doing so makes your program freeze up or become unresponsive. Let's assume the photo above takes one second to download. To illustrate how long one second is to a modern computer, here is a program that tests to see how many tasks JavaScript can process in one second.
 
@@ -386,7 +386,7 @@ function a(done) {
 
 Think back to our non-blocking example, `a(b)`, where we call `a` and pass in `b` as the first argument. In the function definition for `a` above the `done` argument *is* our `b` function that we pass in. This behavior is something that is hard to wrap your head around at first. When you call a function, the arguments you pass in won't have the same variable names when they are in the function. In this case what we call `b` is called `done` inside the function. But `b` and `done` are just variable names that point to the same underlying function. Usually callback functions are labelled something like `done` or `callback` to make it clear that they are functions that should be called when the current function is done.
 
-So, as long as `a` does it's job and called `b` when it is done, both `a` and `b` get called in both the non-blocking and blocking versions. The difference is that in the non-blocking version we don't have to halt execution of JavaScript. In general non-blocking style is where you write every function so that it can return as soon as possible, without ever blocking.
+So, as long as `a` does it's job and calls `b` when it is done, both `a` and `b` get called in both the non-blocking and blocking versions. The difference is that in the non-blocking version we don't have to halt execution of JavaScript. In general non-blocking style is where you write every function so that it can return as soon as possible, without ever blocking.
 
 To drive the point home even further: If `a` takes one second to complete, and you use the blocking version, it means you can only do one thing. If you use the non-blocking version (aka use callbacks) you can do *literally millions* of other things in that same second, which means you can finish your work millions of times faster and sleep the rest of the day.
 
