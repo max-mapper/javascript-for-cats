@@ -317,7 +317,7 @@ uploadPhotoTweet(photo, '@maxogden')
 
 This synchronous [pseudo-code](http://simple.wikipedia.org/wiki/Pseudocode) downloads an adorable cat photo and then uploads the photo to twitter and tweets the photo at `@maxogden`. Pretty straightforward!
 
-(*Author's note: I @maxogden do happily accept random cat photo tweets*)
+(*Author's note: I @maxogden do happily accept random cat photo tweets.*)
 
 This code is synchronous because in order for photo to get uploaded to the tweet, the photo download must be completed. This means that line 2 cannot run until the task on line 1 is totally finished. If we were to actually implement this pseudo-code we would want to make sure that `download` 'blocked' execution until the download was finished, meaning it would prevent *any* other JavaScript from being executed until it finished, and then when the download completes it would un-block the JavaScript execution and line 2 would execute.
 
