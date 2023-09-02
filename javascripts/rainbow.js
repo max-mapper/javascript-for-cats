@@ -25,7 +25,7 @@ window['Rainbow'] = (function() {
      *
      * @type {Object}
      */
-    var replacements = {},
+    let replacements = {},
 
         /**
          * an array of start and end positions of blocks to be replaced
@@ -98,7 +98,7 @@ window['Rainbow'] = (function() {
      * @returns {string|number}
      */
     function _attr(el, attr, attrs, i) {
-        var result = (el.getAttribute && el.getAttribute(attr)) || 0;
+        let result = (el.getAttribute && el.getAttribute(attr)) || 0;
 
         if (!result) {
             attrs = el.attributes;
@@ -147,13 +147,13 @@ window['Rainbow'] = (function() {
         // this means if for example you have: <pre data-language="php">
         // with a bunch of <code> blocks inside then you do not have
         // to specify the language for each block
-        var language = _attr(block, 'data-language') || _attr(block.parentNode, 'data-language');
+        let language = _attr(block, 'data-language') || _attr(block.parentNode, 'data-language');
 
         // this adds support for specifying language via a css class
         // you can use the Google Code Prettify style: <pre class="lang-php">
         // or the HTML5 style: <pre><code class="language-php">
         if (!language) {
-            var pattern = /\blang(?:uage)?-(\w+)/,
+            let pattern = /\blang(?:uage)?-(\w+)/,
                 match = block.className.match(pattern) || block.parentNode.className.match(pattern);
 
             if (match) {
@@ -220,7 +220,7 @@ window['Rainbow'] = (function() {
      * @returns {boolean}
      */
     function _matchIsInsideOtherMatch(start, end) {
-        for (var key in replacement_positions[CURRENT_LEVEL]) {
+        for (let key in replacement_positions[CURRENT_LEVEL]) {
             key = parseInt(key, 10);
 
             // if this block completely overlaps with another block
@@ -259,7 +259,7 @@ window['Rainbow'] = (function() {
      * @returns {number}
      */
     function _indexOfGroup(match, group_number) {
-        var index = 0,
+        let index = 0,
             i;
 
         for (i = 1; i < group_number; ++i) {
@@ -285,7 +285,7 @@ window['Rainbow'] = (function() {
      */
     function _processPattern(regex, pattern, code, callback)
     {
-        var match = regex.exec(code);
+        let match = regex.exec(code);
 
         if (!match) {
             return callback();
@@ -299,7 +299,7 @@ window['Rainbow'] = (function() {
             delete pattern['matches'][0];
         }
 
-        var replacement = match[0],
+        let replacement = match[0],
             start_pos = match.index,
             end_pos = match[0].length + start_pos,
 
@@ -307,7 +307,7 @@ window['Rainbow'] = (function() {
              * callback to process the next match of this pattern
              */
             processNext = function() {
-                var nextCall = function() {
+                let nextCall = function() {
                     _processPattern(regex, pattern, code, callback);
                 };
 
@@ -328,7 +328,7 @@ window['Rainbow'] = (function() {
          * @param {string} replacement
          * @returns void
          */
-        var onMatchSuccess = function(replacement) {
+        let onMatchSuccess = function(replacement) {
                 // if this match has a name then wrap it in a span tag
                 if (pattern['name']) {
                     replacement = _wrapCodeInSpan(pattern['name'], replacement);
@@ -376,7 +376,7 @@ window['Rainbow'] = (function() {
                     return callback(replacement);
                 }
 
-                var processNextGroup = function() {
+                let processNextGroup = function() {
                         processGroup(++i, group_keys, callback);
                     },
                     block = match[group_keys[i]];
@@ -386,7 +386,7 @@ window['Rainbow'] = (function() {
                     return processNextGroup();
                 }
 
-                var group = pattern['matches'][group_keys[i]],
+                let group = pattern['matches'][group_keys[i]],
                     language = group['language'],
 
                     /**
@@ -496,11 +496,11 @@ window['Rainbow'] = (function() {
      * @return {Array}
      */
     function keys(object) {
-        var locations = [],
+        let locations = [],
             replacement,
             pos;
 
-        for(var location in object) {
+        for(let location in object) {
             if (object.hasOwnProperty(location)) {
                 locations.push(location);
             }
@@ -573,12 +573,12 @@ window['Rainbow'] = (function() {
         function _processReplacement(code, positions, i, onComplete) {
             if (i < positions.length) {
                 ++replacement_counter;
-                var pos = positions[i],
+                let pos = positions[i],
                     replacement = replacements[CURRENT_LEVEL][pos];
                 code = _replaceAtPosition(pos, replacement['replace'], replacement['with'], code);
 
                 // process next function
-                var next = function() {
+                let next = function() {
                     _processReplacement(code, positions, ++i, onComplete);
                 };
 
@@ -589,7 +589,7 @@ window['Rainbow'] = (function() {
             onComplete(code);
         }
 
-        var string_positions = keys(replacements[CURRENT_LEVEL]);
+        let string_positions = keys(replacements[CURRENT_LEVEL]);
         _processReplacement(code, string_positions, 0, onComplete);
     }
 
@@ -602,7 +602,7 @@ window['Rainbow'] = (function() {
      * @returns void
      */
     function _highlightBlockForLanguage(code, language, onComplete) {
-        var patterns = _getPatternsForLanguage(language);
+        let patterns = _getPatternsForLanguage(language);
         _processCodeWithPatterns(_htmlEntities(code), patterns, onComplete);
     }
 
@@ -615,7 +615,7 @@ window['Rainbow'] = (function() {
      */
     function _highlightCodeBlock(code_blocks, i, onComplete) {
         if (i < code_blocks.length) {
-            var block = code_blocks[i],
+            let block = code_blocks[i],
                 language = _getLanguageForBlock(block);
 
             if (!_hasClass(block, 'rainbow') && language) {
@@ -664,7 +664,7 @@ window['Rainbow'] = (function() {
         //
         node = node && typeof node.getElementsByTagName == 'function' ? node : document;
 
-        var pre_blocks = node.getElementsByTagName('pre'),
+        let pre_blocks = node.getElementsByTagName('pre'),
             code_blocks = node.getElementsByTagName('code'),
             i,
             final_blocks = [];
