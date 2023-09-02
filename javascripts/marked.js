@@ -9,7 +9,7 @@
  * Block-Level Grammar
  */
 
-var block = {
+let block = {
   newline: /^\n+/,
   code: /^( {4}[^\n]+\n*)+/,
   fences: noop,
@@ -43,7 +43,7 @@ block.html = replace(block.html)
   ();
 
 block.paragraph = (function() {
-  var paragraph = block.paragraph.source
+  let paragraph = block.paragraph.source
     , body = [];
 
   (function push(rule) {
@@ -81,7 +81,7 @@ block.gfm.paragraph = replace(block.paragraph)
  */
 
 block.lexer = function(src) {
-  var tokens = [];
+  let tokens = [];
 
   tokens.links = {};
 
@@ -93,7 +93,7 @@ block.lexer = function(src) {
 };
 
 block.token = function(src, tokens, top) {
-  var src = src.replace(/^ +$/gm, '')
+  let src = src.replace(/^ +$/gm, '')
     , next
     , loose
     , cap
@@ -303,7 +303,7 @@ block.token = function(src, tokens, top) {
  * Inline Processing
  */
 
-var inline = {
+let inline = {
   escape: /^\\([\\`*{}\[\]()#+\-.!_>])/,
   autolink: /^<([^ >]+(@|:\/)[^ >]+)>/,
   url: noop,
@@ -352,7 +352,7 @@ inline.gfm = {
  */
 
 inline.lexer = function(src) {
-  var out = ''
+  let out = ''
     , links = tokens.links
     , link
     , text
@@ -511,7 +511,7 @@ function outputLink(cap, link) {
  * Parsing
  */
 
-var tokens
+let tokens
   , token;
 
 function next() {
@@ -559,7 +559,7 @@ function tok() {
         + '</code></pre>\n';
     }
     case 'blockquote_start': {
-      var body = '';
+      let body = '';
 
       while (next().type !== 'blockquote_end') {
         body += tok();
@@ -570,7 +570,7 @@ function tok() {
         + '</blockquote>\n';
     }
     case 'list_start': {
-      var type = token.ordered ? 'ol' : 'ul'
+      let type = token.ordered ? 'ol' : 'ul'
         , body = '';
 
       while (next().type !== 'list_end') {
@@ -586,7 +586,7 @@ function tok() {
         + '>\n';
     }
     case 'list_item_start': {
-      var body = '';
+      let body = '';
 
       while (next().type !== 'list_item_end') {
         body += token.type === 'text'
@@ -599,7 +599,7 @@ function tok() {
         + '</li>\n';
     }
     case 'loose_item_start': {
-      var body = '';
+      let body = '';
 
       while (next().type !== 'list_item_end') {
         body += tok();
@@ -631,7 +631,7 @@ function tok() {
 }
 
 function parseText() {
-  var body = token.text
+  let body = token.text
     , top;
 
   while ((top = tokens[tokens.length-1])
@@ -645,7 +645,7 @@ function parseText() {
 function parse(src) {
   tokens = src.reverse();
 
-  var out = '';
+  let out = '';
   while (next()) {
     out += tok();
   }
@@ -670,7 +670,7 @@ function escape(html, encode) {
 }
 
 function mangle(text) {
-  var out = ''
+  let out = ''
     , l = text.length
     , i = 0
     , ch;
@@ -687,7 +687,7 @@ function mangle(text) {
 }
 
 function tag() {
-  var tag = '(?!(?:'
+  let tag = '(?!(?:'
     + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code'
     + '|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo'
     + '|span|br|wbr|ins|del|img)\\b)\\w+';
@@ -721,7 +721,7 @@ function marked(src, opt) {
  * Options
  */
 
-var options
+let options
   , defaults;
 
 function setOptions(opt) {
